@@ -183,7 +183,7 @@
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Your property tax is based on the County's number. Is it right?</h1>
+      <h1>Ohio homeowners: your property tax is based on the County's number. Is it right?</h1>
       <p class="lead">When the County values your home above what it would sell for, you pay extra every year. <strong>$50,000 too high costs about $1,000 a year.</strong> We check yours for free.</p>
       <a class="btn btn-gold" href="#join">Get my free check</a><a class="btn btn-line" href="#how">How it works</a>
       <p class="assure">Free for Ohio homeowners. We tell you when not to file.</p>
@@ -393,7 +393,7 @@
         <p class="fine">We use public records plus what you give us. We never sell your information.</p>
       </form>
     </div>
-    <p class="elsewhere">Not in Ohio? <button type="button" onclick="document.getElementById('other').style.display='block';this.parentNode.style.display='none'">Tell us where you live</button></p>
+    <p class="elsewhere">Not in Ohio? We serve Ohio only for now. <button type="button" onclick="document.getElementById('other').style.display='block';this.parentNode.style.display='none'">Tell us where you live</button></p>
     <div id="other" class="formcard">
       <h2>We'll tell you if we come to your state</h2>
       <form name="expansion" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
@@ -403,13 +403,6 @@
           <div><label for="e-name">Your name</label><input id="e-name" name="name" type="text" autocomplete="name" required></div>
           <div><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="row">
-          <div><label for="e-county">County</label><input id="e-county" name="county" type="text" required></div>
-          <div><label for="e-state">State</label><input id="e-state" name="state" type="text" maxlength="20" required></div>
-        </div>
-        <button class="btn submit" type="submit">Notify me</button>
-      </form>
-    </div>
   </div>
 </section>
 
