@@ -84,6 +84,27 @@
   .hero .card .fine { color:var(--muted); }
   .hero { margin-bottom:0 !important; } main > .hero + * { margin-top:28px; }
   @media (max-width:600px){ header .wrap > a { display:none; } }
+
+  /* ===== Engagement hero ===== */
+  .eyebrow { display:inline-block; background:rgba(201,164,76,.16); color:var(--gold); border:1px solid rgba(201,164,76,.45); font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:5px 12px; border-radius:999px; margin-bottom:14px; }
+  .hero h1 em { font-style:normal; color:var(--gold); }
+  .calc { background:rgba(255,255,255,.06); border:1px solid #2a4a7a; border-radius:16px; padding:18px; margin:18px 0 10px; backdrop-filter:blur(4px); }
+  .calc-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .calc label { color:#c8d3e6 !important; font-size:.8rem !important; font-weight:600; margin:0 !important; }
+  .calc input { margin-top:6px; background:#0f2747; color:#fff; border:1px solid #2f5487; font-size:1.15rem; font-weight:700; padding:10px 12px 10px 26px; background-image:linear-gradient(transparent,transparent); }
+  .calc label { position:relative; display:block; }
+  .calc label::after { content:"$"; position:absolute; left:11px; bottom:12px; color:#9fb0cc; font-weight:700; }
+  .calc-out { margin:14px 0 12px; }
+  .calc-out span { display:block; color:#c8d3e6; font-size:.9rem; }
+  .calc-out b { display:block; color:var(--gold); font-size:clamp(2rem,5vw,2.6rem); font-weight:800; letter-spacing:-.02em; line-height:1.15; }
+  .calc-out small { color:#9fb0cc; font-size:.8rem; }
+  .btn { display:inline-block; padding:14px 20px; border-radius:10px; font-weight:700; text-decoration:none; }
+  .btn.gold { background:var(--gold); color:var(--navy); width:100%; text-align:center; }
+  .btn.gold:hover { background:#d8b65e; }
+  .houses { display:block; width:100%; max-width:900px; height:auto; margin:26px auto -48px; opacity:.9; }
+  .trust { display:flex; flex-wrap:wrap; gap:10px 22px; justify-content:center; padding:18px 0 4px; color:var(--muted); font-size:.9rem; font-weight:600; }
+  .trust span::before { content:"✓ "; color:var(--ok); font-weight:800; }
+  @media (max-width:600px){ .calc-row { grid-template-columns:1fr; } }
   footer { background:var(--navy); color:#9fb0cc; border-top:0; }
 </style>
 </head>
@@ -96,13 +117,36 @@
 <main class="wrap">
   <div class="hero">
     <div>
-      <h1>Is your new Hamilton County home value too high?</h1>
-      <p class="lead">The County is setting new values for tax year 2026. We'll compare yours against recent sales of similar homes near you, free, and tell you honestly whether an appeal is worth it.</p>
+      <span class="eyebrow">Hamilton County · 2026 reappraisal</span>
+      <h1>Paying tax on a value your home <em>couldn't sell for?</em></h1>
+      <p class="lead">If the County values your home $50,000 too high, you pay about <b style="color:#fff">$1,000 extra every year</b>. Try your numbers below, then get a free check against real nearby sales.</p>
+      <div class="calc" aria-label="Savings estimate">
+        <div class="calc-row">
+          <label>County's value of your home<input id="cv" type="text" inputmode="numeric" value="400,000"></label>
+          <label>What similar homes sold for<input id="mv" type="text" inputmode="numeric" value="350,000"></label>
+        </div>
+        <div class="calc-out"><span>You may be overpaying about</span><b id="peryr">$1,000 / year</b><small id="per3">≈ $3,000 until the next reappraisal · at ~2% effective tax rate</small></div>
+        <a class="btn gold" href="#join">Check my home free →</a>
+      </div>
       <div class="stats">
         <div class="stat"><b>50–66%</b><small>of Hamilton County homeowners who appealed in recent years won a reduction*</small></div>
         <div class="stat"><b>Jan 1–Mar 31</b><small>the only window to file an appeal with the Board of Revision</small></div>
         <div class="stat"><b>$0</b><small>for the check. If your value looks fair, we'll tell you not to file.</small></div>
       </div>
+      <svg class="houses" style="margin:22px 0 0" viewBox="0 0 900 170" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+  <g fill="none" stroke="#3a5d93" stroke-width="2">
+    <path d="M0 160 H900"/>
+    <path d="M40 160 V95 L95 55 L150 95 V160"/><rect x="80" y="118" width="30" height="42"/><rect x="55" y="100" width="18" height="16"/>
+    <path d="M180 160 V110 L225 78 L270 110 V160"/><rect x="210" y="128" width="26" height="32"/>
+    <path d="M300 160 V80 L370 30 L440 80 V160"/><rect x="355" y="112" width="32" height="48"/><rect x="318" y="92" width="22" height="18"/><rect x="400" y="92" width="22" height="18"/>
+    <path d="M470 160 V105 L520 70 L570 105 V160"/><rect x="503" y="124" width="28" height="36"/>
+    <path d="M600 160 V90 L660 48 L720 90 V160"/><rect x="645" y="116" width="30" height="44"/><rect x="615" y="98" width="20" height="16"/>
+    <path d="M750 160 V112 L795 80 L840 112 V160"/><rect x="782" y="130" width="26" height="30"/>
+  </g>
+  <g>
+    <rect x="335" y="2" width="72" height="24" rx="12" fill="#c9a44c"/><text x="371" y="19" text-anchor="middle" font-family="Inter,system-ui" font-size="13" font-weight="800" fill="#0b1f3a">−$50K</text>
+  </g>
+</svg>
       <p class="fine">*Reported by WKRC Local 12 from Hamilton County Board of Revision data. Past results don't predict yours.</p>
     </div>
 
@@ -141,6 +185,8 @@
       </form>
     </div>
   </div>
+
+  <div class="trust"><span>Free check</span><span>Real nearby sales</span><span>We tell you if it's not worth filing</span><span>You stay in control</span></div>
 
   <section>
     <h2>How it works</h2>
@@ -206,6 +252,14 @@
 <script>
   // Capture realtor/partner referral codes from links like ?ref=jsmith so we know which partner sent each signup.
   try { const r = new URLSearchParams(location.search).get('ref'); if (r) document.getElementById('ref').value = r.slice(0, 40); } catch (e) {}
+</script>
+<script>
+  try {
+    const n=s=>Number(String(s).replace(/[^0-9.]/g,''))||0, f=x=>'$'+Math.round(x).toLocaleString();
+    const cv=document.getElementById('cv'), mv=document.getElementById('mv'), a=document.getElementById('peryr'), b=document.getElementById('per3');
+    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=gap*0.02; a.textContent = gap>0 ? f(Math.round(yr/10)*10)+' / year' : 'Looks fair'; b.textContent = gap>0 ? '≈ '+f(Math.round(yr*3/10)*10)+' until the next reappraisal · at ~2% effective tax rate' : "If your value is at or below what homes sell for, we'll tell you not to file."; };
+    [cv,mv].forEach(i=>{ i.addEventListener('input',upd); i.addEventListener('blur',()=>{ i.value=n(i.value).toLocaleString(); }); });
+  } catch(e) {}
 </script>
 </body>
 </html>

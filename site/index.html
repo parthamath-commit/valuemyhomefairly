@@ -3,97 +3,268 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Value My Home Fairly — Ohio property tax value check</title>
-<meta name="description" content="Free check of your Ohio county home value against recent sales of similar homes nearby, and an honest answer on whether an appeal is worth it.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Value My Home Fairly — Check your Ohio property tax value</title>
+<meta name="description" content="Free check of your Ohio home's county value against recent nearby sales. See what you may be overpaying and whether an appeal is worth it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#17202a; --muted:#56606b; --line:#dfe3e8; --bg:#f7f8fa; --brand:#1d5fb8; --brand-dark:#164a90; }
-  * { box-sizing:border-box; }
-  body { margin:0; font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); }
-  .wrap { max-width:980px; margin:0 auto; padding:0 16px; }
-  header { background:#fff; border-bottom:1px solid var(--line); }
-  header .wrap { padding:14px 16px; }
-  .logo { font-weight:800; font-size:1.15rem; } .logo span { color:var(--brand); }
-  .hero { padding:56px 0 24px; max-width:720px; }
-  h1 { font-size:clamp(1.9rem,4.5vw,2.7rem); line-height:1.12; margin:0 0 14px; letter-spacing:-.02em; }
-  .lead { font-size:1.15rem; color:var(--muted); }
-  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; margin-bottom:16px; }
-  .live { border:2px solid var(--brand); display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-  .live h2 { margin:0 0 4px; font-size:1.25rem; } .live p { margin:0; color:var(--muted); }
-  .btn { display:inline-block; background:var(--brand); color:#fff; font-weight:700; text-decoration:none; padding:13px 20px; border-radius:10px; border:0; font:inherit; font-weight:700; cursor:pointer; }
-  .btn:hover { background:var(--brand-dark); }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:8px 0 24px; }
-  .grid h3 { margin:0 0 6px; font-size:1.05rem; } .grid p { margin:0; color:var(--muted); font-size:.95rem; }
-  label { display:block; font-weight:600; font-size:.92rem; margin:12px 0 5px; }
-  input, select { width:100%; font:inherit; padding:11px 12px; border:1px solid #b8c0c9; border-radius:9px; background:#fff; }
-  .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .fine { font-size:.8rem; color:var(--muted); margin-top:10px; }
-  .check { display:flex; gap:10px; align-items:flex-start; font-weight:400 !important; font-size:.88rem !important; color:var(--muted); }
-  .check input { width:auto; margin-top:4px; }
-  table.ex { width:100%; border-collapse:collapse; }
-  table.ex td { padding:9px 4px; border-bottom:1px solid var(--line); }
-  table.ex td:last-child { text-align:right; font-weight:600; }
-  table.ex tr.hl td { color:#1d7a47; font-weight:800; }
-  .hp { position:absolute; left:-9999px; }
-  footer { border-top:1px solid var(--line); background:#fff; padding:22px 0 30px; font-size:.82rem; color:var(--muted); margin-top:32px; }
-  @media (max-width:760px){ .grid, .row { grid-template-columns:1fr; } .hero { padding-top:32px; } }
-  /* ===== Navy professional theme ===== */
-  :root { --navy:#0b1f3a; --navy-2:#132d52; --brand:#1e4a8c; --brand-dark:#163a70; --gold:#c9a44c; --ink:#14213a; --muted:#5a6578; --line:#e3e7ee; --bg:#f5f7fb; --ok:#1d7a47; }
-  body { font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
-  header { background:var(--navy); border-bottom:0; }
-  header .logo, header a { color:#fff !important; }
-  .logo { letter-spacing:-.01em; } .logo span { color:var(--gold) !important; }
-  .hero { position:relative; background:var(--navy); color:#fff; box-shadow:0 0 0 100vmax var(--navy); clip-path:inset(0 -100vmax); padding-bottom:48px !important; margin-bottom:28px; }
-  .hero h1 { color:#fff; font-weight:800; }
-  .hero .lead { color:#c8d3e6; }
-  .hero > div > .fine, .hero .fine { color:#9fb0cc; }
-  .hero .stat { background:var(--navy-2); border-color:#24426f; }
-  .hero .stat b { color:var(--gold); }
-  .hero .stat small { color:#c8d3e6; }
-  .hero .card { color:var(--ink); box-shadow:0 18px 40px rgba(3,12,30,.35); border:0; }
-  .card { border-color:var(--line); box-shadow:0 1px 3px rgba(11,31,58,.06); }
-  h2 { color:var(--navy); letter-spacing:-.015em; }
-  .btn, button { background:var(--brand); }
-  .btn:hover, button:hover { background:var(--brand-dark); }
-  .live { border:0 !important; background:linear-gradient(135deg,#ffffff,#eef3fb); border-left:5px solid var(--gold) !important; }
-  .step .n { background:var(--navy); color:var(--gold); }
-  .featured { border:2px solid var(--navy) !important; position:relative; }
-  .featured::before { content:"Most guidance"; position:absolute; top:-12px; right:16px; background:var(--gold); color:var(--navy); font-size:.72rem; font-weight:800; padding:3px 10px; border-radius:999px; }
-  input:focus, select:focus { outline:3px solid rgba(30,74,140,.2); border-color:var(--brand); }
-  .hero .card .fine { color:var(--muted); }
-  .hero { margin-bottom:0 !important; } main > .hero + * { margin-top:28px; }
-  @media (max-width:600px){ header .wrap > a { display:none; } }
-  footer { background:var(--navy); color:#9fb0cc; border-top:0; }
+  :root{--ink:#13233D;--head:#0E2340;--paper:#F3F5F8;--card:#FFFFFF;--gold:#C9A44C;--red:#B4402F;--green:#2E7D5B;--muted:#56637A;--rule:#D9DEE7;}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font:18px/1.6 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-variant-numeric:tabular-nums}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  .measure{max-width:62ch}
+
+  /* header */
+  header{background:var(--head);color:#fff;position:sticky;top:0;z-index:40}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-weight:800;font-size:1.08rem;text-decoration:none;letter-spacing:-.01em}
+  .logo i{font-style:normal;color:var(--gold)}
+  nav{display:flex;gap:26px;align-items:center;font-size:.95rem}
+  nav a{text-decoration:none;color:#C9D3E3}
+  nav a:hover{color:#fff}
+  nav .go{color:var(--head);background:var(--gold);padding:8px 16px;border-radius:8px;font-weight:700}
+
+  /* hero */
+  .hero{background:var(--head);color:#fff;padding:56px 0 72px}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  h1{font-size:clamp(2.2rem,4.6vw,3.5rem);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin:0 0 20px}
+  .hero p.lead{font-size:1.2rem;color:#C9D3E3;margin:0 0 28px;max-width:34ch}
+  .hero p.lead strong{color:#fff}
+  .btn{display:inline-block;font:inherit;font-weight:700;border:0;border-radius:10px;padding:15px 24px;text-decoration:none;cursor:pointer}
+  .btn-gold{background:var(--gold);color:var(--head)}
+  .btn-gold:hover{background:#D7B565}
+  .btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px #3B557D;margin-left:8px}
+  .btn-line:hover{box-shadow:inset 0 0 0 1.5px #fff}
+  .assure{margin-top:22px;font-size:.92rem;color:#9FB0CA}
+
+  /* the record card (signature element) */
+  .record{background:var(--card);color:var(--ink);border-radius:6px;box-shadow:0 2px 0 #C9D1DD,0 28px 60px rgba(0,0,0,.35);position:relative;overflow:hidden}
+  .record-top{display:flex;justify-content:space-between;align-items:baseline;padding:16px 22px;border-bottom:2px solid var(--ink);font-size:.82rem;color:var(--muted)}
+  .record-top b{color:var(--ink);font-size:.95rem}
+  .rline{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--rule)}
+  .rline label{font-size:.9rem;color:var(--muted)}
+  .rline input{width:7.2ch;text-align:right;border:0;border-bottom:1.5px dashed #AEB8C8;font:inherit;font-weight:800;font-size:1.45rem;color:var(--ink);background:transparent;padding:2px 0}
+  .rline input:focus{outline:none;border-bottom-color:var(--ink)}
+  .money{position:relative;display:inline-flex;align-items:baseline;gap:0;font-weight:800;font-size:1.45rem}
+  .county .money::after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:var(--red);transform-origin:left;transform:scaleX(1);border-radius:2px}
+  .county input{color:#7A8597}
+  .stamp{display:inline-block;margin-left:10px;transform:rotate(-6deg);border:2.5px solid var(--red);color:var(--red);font-weight:900;font-size:.8rem;padding:3px 9px;border-radius:5px;opacity:.85;letter-spacing:.02em}
+  .sales input{color:var(--green)}
+  .total{background:#FAF6EA;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:2px solid var(--ink)}
+  .total span{font-size:.95rem;font-weight:600}
+  .total output{font-size:2.3rem;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+  .record small{display:block;padding:12px 22px 16px;color:var(--muted);font-size:.78rem}
+  .record .btn{display:block;margin:0 22px 20px;text-align:center}
+  @media (prefers-reduced-motion:no-preference){
+    .county .money::after{animation:strike .7s .5s both cubic-bezier(.6,0,.2,1)}
+    .stamp{animation:stamp .35s 1.2s both}
+    @keyframes strike{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes stamp{from{opacity:0;transform:rotate(-6deg) scale(1.6)}to{opacity:.85;transform:rotate(-6deg) scale(1)}}
+  }
+
+  /* sections */
+  section{padding:84px 0;border-bottom:1px solid var(--rule)}
+  h2{font-size:clamp(1.7rem,3.2vw,2.35rem);line-height:1.12;letter-spacing:-.025em;font-weight:850;margin:0 0 16px}
+  .sub{color:var(--muted);margin:0 0 40px}
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+
+  .bars{display:grid;gap:10px;margin-top:6px}
+  .bar{display:flex;justify-content:space-between;padding:14px 16px;font-weight:700;border-radius:4px}
+  .bar.c{background:#F6E3DF;color:var(--red)}
+  .bar.m{background:#E1F0E8;color:var(--green);width:87.5%}
+  .bar.g{background:var(--ink);color:#fff}
+  .bars p{font-size:.82rem;color:var(--muted);margin:4px 0 0}
+
+  ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+  ol.steps li{counter-increment:s;padding:24px 28px 8px 0}
+  ol.steps li+li{padding-left:28px;border-left:1px solid var(--rule)}
+  ol.steps li::before{content:counter(s);display:block;font-size:2.6rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:12px}
+  ol.steps h3,.fit h3{font-size:1.15rem;margin:0 0 8px}
+  ol.steps p,.fit p{margin:0;color:var(--muted);font-size:1rem}
+
+  .fit{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .fit div{border-left:3px solid var(--gold);padding-left:18px}
+
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink);border-radius:6px;background:var(--card)}
+  .prices > div{padding:28px}
+  .prices > div+div{border-left:1px solid var(--rule)}
+  .prices .pick{background:var(--ink);color:#fff;border-radius:0 5px 5px 0}
+  .prices .pick p{color:#C9D3E3}
+  .prices h3{margin:0;font-size:1rem}
+  .prices .amt{font-size:2.6rem;font-weight:900;letter-spacing:-.03em;margin:4px 0 8px}
+  .prices p{margin:0;color:var(--muted);font-size:.97rem}
+  .note{font-size:.9rem;color:var(--muted);margin-top:16px}
+
+  ol.when{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+  ol.when li{padding:20px 20px 0 0}
+  ol.when li+li{padding-left:20px;border-left:1px solid var(--rule)}
+  ol.when b{display:block;font-size:1.05rem}
+  ol.when span{color:var(--muted);font-size:.95rem}
+  ol.when li.key b{color:var(--red)}
+
+  /* form */
+  #join{background:var(--head);color:#fff;border:0}
+  .formcard{background:var(--card);color:var(--ink);border-radius:6px;padding:34px;max-width:700px;margin:0 auto;box-shadow:0 28px 60px rgba(0,0,0,.35)}
+  .formcard h2{margin-bottom:8px}
+  .formcard > p{color:var(--muted);margin:0 0 8px;font-size:1rem}
+  form label{display:block;font-weight:600;font-size:.9rem;margin:16px 0 6px}
+  form input[type=text],form input[type=email],form select{width:100%;font:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid #C3CBD8;border-radius:8px;background:#fff;color:var(--ink)}
+  form input:focus,form select:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(201,164,76,.35)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .check{display:flex;gap:10px;align-items:flex-start;font-weight:400 !important;font-size:.9rem !important;color:var(--muted)}
+  .check input{margin-top:5px}
+  .submit{width:100%;margin-top:22px;background:var(--ink);color:#fff}
+  .submit:hover{background:#1E3457}
+  .fine{font-size:.82rem;color:var(--muted);text-align:center;margin:12px 0 0}
+  .hamnote{display:none;margin-top:10px;background:#FAF6EA;border-left:3px solid var(--gold);padding:10px 12px;font-size:.92rem}
+  .hp{position:absolute;left:-9999px}
+  .elsewhere{text-align:center;margin-top:20px;color:#C9D3E3;font-size:.95rem}
+  .elsewhere button{background:none;border:0;color:var(--gold);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+  #other{display:none;margin-top:18px}
+
+  /* faq */
+  .faq{max-width:760px}
+  details{border-top:1px solid var(--rule);padding:18px 0}
+  details:last-child{border-bottom:1px solid var(--rule)}
+  summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-weight:400;font-size:1.4rem;line-height:1;color:var(--muted)}
+  details[open] summary::after{content:"−"}
+  details p{margin:10px 0 0;color:var(--muted)}
+
+  footer{background:var(--head);color:#9FB0CA;font-size:.86rem;padding:34px 0 96px}
+  footer b{color:#fff}
+  .sticky{display:none}
+
+  @media (max-width:880px){
+    .hero-grid,.two{grid-template-columns:1fr;gap:36px}
+    ol.steps,.fit,.prices,ol.when{grid-template-columns:1fr}
+    ol.steps li+li,ol.when li+li{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+    .prices > div+div{border-left:0;border-top:1px solid var(--rule)}
+    .prices .pick{border-radius:0 0 5px 5px}
+    nav a:not(.go){display:none}
+  }
+  @media (max-width:560px){
+    .hero-grid{display:flex;flex-direction:column;gap:18px}
+    .hero .lead{margin:0}
+    .hero-grid > div:first-child{display:contents}
+    .hero-grid h1{order:1} .hero .lead{order:2} .record{order:3} .hero .btn-gold:not(.record .btn){order:4} .btn-line{order:5;align-self:flex-start} .assure{order:6}
+    body{font-size:17px}
+    section{padding:60px 0}
+    .hero{padding:36px 0 56px}
+    .row{grid-template-columns:1fr}
+    .btn-line{margin:10px 0 0}
+    .formcard{padding:24px}
+    .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;text-align:center;background:var(--gold);color:var(--head);font-weight:800;padding:15px;border-radius:10px;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.3);transition:opacity .2s}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo">Value My Home <span>Fairly</span></div></div></header>
-<main class="wrap">
-  <div class="hero">
-    <h1>Is your Ohio home's tax value too high?</h1>
-    <p class="lead">We compare your county's value with recent sales of similar homes nearby, free, and tell you honestly whether an appeal is worth it. If it is, we help you file it yourself with the Board of Revision, fully prepared.</p>
-  </div>
+<header><div class="wrap">
+  <a class="logo" href="/">Value My Home <i>Fairly</i></a>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a class="go" href="#join">Free check</a></nav>
+</div></header>
 
-  <div class="card live">
-    <div><h2>Open now: Hamilton County (Cincinnati)</h2><p>Other Ohio counties: join the list below and we'll tell you when yours opens.</p></div>
-    <a class="btn" href="/cincinnati/">Hamilton County check →</a>
-  </div>
+<main>
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Your property tax is based on the County's number. Is it right?</h1>
+      <p class="lead">When the County values your home above what it would sell for, you pay extra every year. <strong>$50,000 too high costs about $1,000 a year.</strong> We check yours for free.</p>
+      <a class="btn btn-gold" href="#join">Get my free check</a><a class="btn btn-line" href="#how">How it works</a>
+      <p class="assure">Free for Ohio homeowners. We tell you when not to file.</p>
+    </div>
 
-  <div class="grid">
-    <div class="card"><h3>Free check</h3><p>Your value vs. 3–5 recent nearby sales, plus errors in your county record.</p></div>
-    <div class="card"><h3>Honest answer</h3><p>Too high, borderline, or fair. If it's fair, we'll tell you not to file.</p></div>
-    <div class="card"><h3>You file, prepared</h3><p>An evidence packet with comparable sales and the complaint-form entries filled in.</p></div>
+    <div class="record" aria-label="Try your numbers">
+      <div class="record-top"><b>Your home, by the numbers</b><span>Edit the amounts</span></div>
+            <div class="rline county"><label for="cv">County's value <span class="stamp" aria-hidden="true">Too high?</span></label><span class="money">$<input id="cv" inputmode="numeric" value="400,000" aria-label="County's value of your home in dollars"></span></div>
+      <div class="rline sales"><label for="mv">What similar homes nearby sold for</label><span class="money">$<input id="mv" inputmode="numeric" value="350,000" aria-label="What similar homes sold for in dollars"></span></div>
+      <div class="total"><span>Extra tax you may be paying</span><output id="peryr" aria-live="polite">$1,000/yr</output></div>
+      <small id="per3">About $3,000 until the next reappraisal, at a ~2% effective tax rate. Rates vary by county and school district.</small>
+      <a class="btn btn-gold" href="#join">Check my real numbers</a>
+    </div>
   </div>
+</div>
 
-  <div class="card" id="join">
-    <h2 style="margin-top:0">Join the list for your county</h2>
-    <p style="color:var(--muted);margin-top:0">All 88 Ohio counties use the same appeal process: a complaint to your county Board of Revision, filed between January 1 and March 31. We're opening counties one at a time, starting with Hamilton, and we open next where the most people ask.</p>
-    <form name="ohio-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="ohio-waitlist">
-      <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <label for="o-county">Your county</label>
-      <select id="o-county" name="county" required>
-            <option value="">Choose your county</option>
+<section>
+  <div class="wrap two">
+    <div class="measure">
+      <h2>Counties value every home at once. Yours can be off.</h2>
+      <p>Mass-appraisal formulas can't see your dated kitchen, the busy road, or that the house next door sold for less. When the County's number is too high, you pay extra every year until someone challenges it.</p>
+      <p>Ohio lets every owner challenge it once a year, from January 1 to March 31. The strongest evidence is recent sales of similar homes nearby. Most people never file because they don't know whether they'd win. That's what the free check answers.</p>
+    </div>
+    <div class="bars" aria-label="Example">
+      <div class="bar c"><span>County's value</span><span>$400,000</span></div>
+      <div class="bar m"><span>Sells for</span><span>$350,000</span></div>
+      <div class="bar g"><span>Taxed on an extra</span><span>$50,000</span></div>
+      <p>Illustrative example.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub measure">Three steps. No lawyers, no share of your savings.</p>
+    <ol class="steps">
+      <li><h3>We check your value</h3><p>Your County value against 3–5 recent sales of similar homes nearby, plus a scan of your County record for errors like wrong square footage.</p></li>
+      <li><h3>You get a straight answer</h3><p>Likely too high, borderline, or fair. If it's fair, we tell you not to file, because an appeal can also raise a value.</p></li>
+      <li><h3>You file, prepared</h3><p>If it's worth it, get an evidence packet: comparable sales, the complaint form filled in, a checklist and a short hearing script. You sign and file it yourself.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who usually saves the most</h2>
+    <p class="sub measure">If one of these sounds like you, your check is worth two minutes.</p>
+    <div class="fit">
+      <div><h3>You bought recently</h3><p>…for less than the County says your home is worth. Your purchase price is the strongest evidence there is.</p></div>
+      <div><h3>Your record is wrong</h3><p>Extra square footage, a bathroom you don't have, a basement that isn't finished. Errors are the easiest wins.</p></div>
+      <div><h3>Your value jumped</h3><p>…more than your neighbors' did, or more than homes like yours actually sell for.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Start free. Pay only if it's worth it.</h2>
+    <p class="sub measure">Appeal firms often keep a large share of your savings. We charge a flat price, and only when your numbers support filing.</p>
+    <div class="prices">
+      <div><h3>Value check</h3><div class="amt">Free</div><p>Your value vs. nearby sales, record errors, and an honest verdict.</p></div>
+      <div><h3>Evidence packet</h3><div class="amt">$59</div><p>Comparable-sales table, filled-in complaint form, filing checklist and hearing script.</p></div>
+      <div class="pick"><h3>Packet and review call</h3><div class="amt">$149</div><p>Everything in the packet, plus a 30-minute call to walk through your case and prepare you for the hearing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Ohio accepts complaints once a year</h2>
+    <p class="sub measure">Miss March 31 and you wait another year.</p>
+    <ol class="when">
+      <li><b>Now</b><span>Join the list for your county</span></li>
+      <li><b>Before January</b><span>We email your free check result</span></li>
+      <li class="key"><b>Jan 1 – Mar 31</b><span>File with your county Board of Revision</span></li>
+      <li><b>After filing</b><span>A short hearing, then a lower value on your bill if the Board agrees</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="formcard">
+      <h2>Get your free check</h2>
+      <p>Pick your county and we'll compare your value with recent nearby sales and email you the result. We're opening Ohio counties one at a time, starting with Hamilton.</p>
+      <form name="ohio-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="ohio-waitlist">
+        <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label for="o-county">Your county</label>
+        <select id="o-county" name="county" required>
+<option value="">Choose your county</option>
             <option>Adams</option>
             <option>Allen</option>
             <option>Ashland</option>
@@ -182,82 +353,74 @@
             <option>Williams</option>
             <option>Wood</option>
             <option>Wyandot</option>
-      </select>
-      <p id="ham-note" class="fine" style="display:none">Hamilton County is open now. <a href="/cincinnati/">Use the Hamilton County page</a> for the fastest check.</p>
-      <div class="row">
-        <div><label for="o-name">Your name</label><input id="o-name" name="name" type="text" autocomplete="name" required></div>
-        <div><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="row">
-        <div><label for="o-address">Home street address</label><input id="o-address" name="address" type="text" autocomplete="street-address" required></div>
-        <div><label for="o-zip">ZIP</label><input id="o-zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
-      </div>
-      <label class="check"><input type="checkbox" name="consent" value="yes" required> Email me when my county opens, plus my check result and filing reminders. I can unsubscribe anytime.</label>
-      <button class="btn" type="submit" style="margin-top:16px;width:100%">Join the list — free</button>
-      <p class="fine">We use public records plus what you give us. We never sell your information.</p>
-    </form>
+              </select>
+        <div id="ham-note" class="hamnote">Hamilton County checks are open now. For the fastest result, <a href="/cincinnati/">use the Hamilton County page</a>.</div>
+        <div class="row">
+          <div><label for="o-name">Your name</label><input id="o-name" name="name" type="text" autocomplete="name" required></div>
+          <div><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row">
+          <div><label for="o-address">Home street address</label><input id="o-address" name="address" type="text" autocomplete="street-address" required></div>
+          <div><label for="o-zip">ZIP</label><input id="o-zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
+        </div>
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> Email me my check result and filing reminders. I can unsubscribe anytime.</label>
+        <button class="btn submit" type="submit">Get my free check</button>
+        <p class="fine">We use public records plus what you give us. We never sell your information.</p>
+      </form>
+    </div>
+    <p class="elsewhere">Not in Ohio? <button type="button" onclick="document.getElementById('other').style.display='block';this.parentNode.style.display='none'">Tell us where you live</button></p>
+    <div id="other" class="formcard">
+      <h2>We'll tell you if we come to your state</h2>
+      <form name="expansion" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="expansion">
+        <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="row">
+          <div><label for="e-name">Your name</label><input id="e-name" name="name" type="text" autocomplete="name" required></div>
+          <div><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row">
+          <div><label for="e-county">County</label><input id="e-county" name="county" type="text" required></div>
+          <div><label for="e-state">State</label><input id="e-state" name="state" type="text" maxlength="20" required></div>
+        </div>
+        <button class="btn submit" type="submit">Notify me</button>
+      </form>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h2 style="margin-top:0">What is Value My Home Fairly?</h2>
-    <p>Your property tax is based on the value your County Auditor puts on your home, not on what it would actually sell for. If that value is too high, you overpay every year until it's corrected. Ohio lets every owner challenge it, but most people don't know whether their value is wrong or how to prove it.</p>
-    <p style="margin-bottom:0"><b>What you get:</b></p>
-    <ul style="color:var(--muted);margin-top:6px">
-      <li><b>A free check</b> of your county value against 3–5 recent sales of similar homes nearby, plus a scan of your county record for errors such as wrong square footage.</li>
-      <li><b>An honest verdict:</b> likely too high, borderline, or fair. If it's fair, we tell you not to file.</li>
-      <li><b>A $59 evidence packet</b> if an appeal looks worth it: comparable-sales table, complaint-form (DTE 1) entries filled in, filing checklist and a short hearing script. You sign and file it yourself.</li>
-      <li><b>A $149 option</b> that adds a 30-minute call to walk through your case and prepare you for the hearing.</li>
-    </ul>
+<section id="faq">
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>Is this the County Auditor?</summary><p>No. Value My Home Fairly is an independent service from Pal Initiatives LLC in Cincinnati, not affiliated with any county, Auditor or Board of Revision.</p></details>
+    <details><summary>Are you lawyers or appraisers?</summary><p>No. We prepare factual information from public records so you can file your own complaint. We don't file for you, represent you or give legal advice. For complex or commercial cases we'll point you to an attorney.</p></details>
+    <details><summary>Could appealing raise my value?</summary><p>Yes. The Board can keep, lower or raise a value. That's why the check tells you when not to file.</p></details>
+    <details><summary>How much will I save?</summary><p>It depends on how far your value is above the market and on your local tax rate. As a rough guide, each $50,000 of overvaluation costs about $1,000 a year. Your free check gives you your own estimate.</p></details>
+    <details><summary>When can I file?</summary><p>Between January 1 and March 31, with your county Board of Revision. Join the list and we'll remind you.</p></details>
+    <details><summary>What happens to my information?</summary><p>We use your address to look up public property records and your email to send your result and reminders. We never sell or share it, and we'll delete it on request.</p></details>
   </div>
-
-  <div class="card">
-    <h2 style="margin-top:0">How much could you save?</h2>
-    <table class="ex">
-      <tr><td>County value of your home</td><td>$400,000</td></tr>
-      <tr><td>Value supported by recent nearby sales</td><td>$350,000</td></tr>
-      <tr><td>Too high by</td><td>$50,000</td></tr>
-      <tr class="hl"><td>Tax saved per year (at about 2% effective rate)</td><td>≈ $1,000</td></tr>
-    </table>
-    <p class="fine">Illustrative example only. Tax rates differ by county and school district, and results depend on your home and the Board of Revision's decision. Some appeals don't succeed, and the Board can also raise a value.</p>
-  </div>
-
-
-  <div class="card">
-    <h2 style="margin-top:0">Key dates in Ohio</h2>
-    <table class="ex">
-      <tr><td><b>Now</b></td><td>Join the list for your county (free)</td></tr>
-      <tr><td><b>When your county opens</b></td><td>We email your free check result</td></tr>
-      <tr><td><b>Jan 1 – Mar 31</b></td><td>The only window each year to file a complaint with your county Board of Revision</td></tr>
-      <tr><td><b>After filing</b></td><td>A short hearing where you present your comparable sales</td></tr>
-      <tr><td><b>Following tax bill</b></td><td>Lower value shows on your bill if the Board agrees</td></tr>
-    </table>
-    <p class="fine">Best candidates: you bought recently for less than the County's value, your County record has errors (like extra square footage), or your value jumped more than your neighbors'. We're not lawyers or appraisers and we never file for you. Self-help information only.</p>
-  </div>
-
-  <div class="card">
-    <h2 style="margin-top:0">Not in Ohio?</h2>
-    <p style="color:var(--muted);margin-top:0">Tell us where you live and we'll let you know if we come to your state.</p>
-    <form name="expansion" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="expansion">
-      <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="row">
-        <div><label for="e-name">Your name</label><input id="e-name" name="name" type="text" autocomplete="name" required></div>
-        <div><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="row">
-        <div><label for="e-county">County</label><input id="e-county" name="county" type="text" required></div>
-        <div><label for="e-state">State</label><input id="e-state" name="state" type="text" maxlength="20" required></div>
-      </div>
-      <button class="btn" type="submit" style="margin-top:16px;width:100%">Notify me</button>
-    </form>
-  </div>
+</section>
 </main>
+
 <footer><div class="wrap">
-  Value My Home Fairly · Pal Initiatives LLC · Cincinnati, Ohio<br>
+  <b>Value My Home Fairly</b>, Pal Initiatives LLC, Cincinnati, Ohio.<br>
   Self-help information from public records. Not legal advice or an appraisal. Not affiliated with any county government. Results are not guaranteed.
 </div></footer>
+
+<a class="sticky" href="#join">Get my free check</a>
+
 <script>
-  try { const s=document.getElementById("o-county"), n=document.getElementById("ham-note"); s.addEventListener("change",()=>{ n.style.display = s.value==="Hamilton" ? "block" : "none"; }); } catch(e) {}
+  try {
+    const n=s=>Number(String(s).replace(/[^0-9.]/g,''))||0, f=x=>'$'+Math.round(x).toLocaleString();
+    const cv=document.getElementById('cv'), mv=document.getElementById('mv'), a=document.getElementById('peryr'), b=document.getElementById('per3');
+    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=Math.round(gap*0.02/10)*10;
+      a.textContent = gap>0 ? f(yr)+'/yr' : '$0';
+      b.textContent = gap>0 ? 'About '+f(yr*3)+' until the next reappraisal, at a ~2% effective tax rate. Rates vary by county and school district.' : "If your value is at or below what homes sell for, you're likely taxed fairly and we'd tell you not to file."; };
+    [cv,mv].forEach(i=>{ i.addEventListener('input',upd); i.addEventListener('blur',()=>{ i.value=n(i.value).toLocaleString(); }); });
+    const s=document.getElementById('o-county'), note=document.getElementById('ham-note');
+    s.addEventListener('change',()=>{ note.style.display = s.value==='Hamilton' ? 'block' : 'none'; });
+    const sticky=document.querySelector('.sticky'), join=document.getElementById('join');
+    if ('IntersectionObserver' in window) new IntersectionObserver(e=>{ const on=e[0].isIntersecting; sticky.style.opacity=on?'0':'1'; sticky.style.pointerEvents=on?'none':'auto'; }).observe(join);
+  } catch(e) {}
 </script>
 </body>
 </html>
