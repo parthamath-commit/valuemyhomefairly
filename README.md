@@ -9,3 +9,5 @@ Landing site for valuemyhomefairly.com (Pal Initiatives LLC).
 Hosting: Netlify, auto-deploys from the `main` branch (publish folder `site/`, set in `netlify.toml`).
 Forms: Netlify Forms with honeypot field `bot-field`. Don't rename it to anything autofill might fill (e.g. "company").
 DNS: Cloudflare, CNAME `@` and `www` → Netlify, proxy OFF (grey cloud).
+
+Repository is public (needed for Netlify free-plan deploys). It holds only public website files: no keys, passwords or signup data.

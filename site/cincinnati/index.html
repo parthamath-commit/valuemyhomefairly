@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hamilton County Home Value Check — Value My Home Fairly</title>
 <meta name="description" content="Free check of your Hamilton County home value against recent sales of similar homes. Join the list and we'll check your new 2026 value as soon as it's posted.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root { --ink:#17202a; --muted:#56606b; --line:#dfe3e8; --bg:#f7f8fa; --brand:#1d5fb8; --brand-dark:#164a90; --ok:#1d7a47; }
   * { box-sizing: border-box; }
@@ -57,6 +58,33 @@
     .steps, .price { grid-template-columns: 1fr; }
     .stats { grid-template-columns: 1fr; }
   }
+  /* ===== Navy professional theme ===== */
+  :root { --navy:#0b1f3a; --navy-2:#132d52; --brand:#1e4a8c; --brand-dark:#163a70; --gold:#c9a44c; --ink:#14213a; --muted:#5a6578; --line:#e3e7ee; --bg:#f5f7fb; --ok:#1d7a47; }
+  body { font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--navy); border-bottom:0; }
+  header .logo, header a { color:#fff !important; }
+  .logo { letter-spacing:-.01em; } .logo span { color:var(--gold) !important; }
+  .hero { position:relative; background:var(--navy); color:#fff; box-shadow:0 0 0 100vmax var(--navy); clip-path:inset(0 -100vmax); padding-bottom:48px !important; margin-bottom:28px; }
+  .hero h1 { color:#fff; font-weight:800; }
+  .hero .lead { color:#c8d3e6; }
+  .hero > div > .fine, .hero .fine { color:#9fb0cc; }
+  .hero .stat { background:var(--navy-2); border-color:#24426f; }
+  .hero .stat b { color:var(--gold); }
+  .hero .stat small { color:#c8d3e6; }
+  .hero .card { color:var(--ink); box-shadow:0 18px 40px rgba(3,12,30,.35); border:0; }
+  .card { border-color:var(--line); box-shadow:0 1px 3px rgba(11,31,58,.06); }
+  h2 { color:var(--navy); letter-spacing:-.015em; }
+  .btn, button { background:var(--brand); }
+  .btn:hover, button:hover { background:var(--brand-dark); }
+  .live { border:0 !important; background:linear-gradient(135deg,#ffffff,#eef3fb); border-left:5px solid var(--gold) !important; }
+  .step .n { background:var(--navy); color:var(--gold); }
+  .featured { border:2px solid var(--navy) !important; position:relative; }
+  .featured::before { content:"Most guidance"; position:absolute; top:-12px; right:16px; background:var(--gold); color:var(--navy); font-size:.72rem; font-weight:800; padding:3px 10px; border-radius:999px; }
+  input:focus, select:focus { outline:3px solid rgba(30,74,140,.2); border-color:var(--brand); }
+  .hero .card .fine { color:var(--muted); }
+  .hero { margin-bottom:0 !important; } main > .hero + * { margin-top:28px; }
+  @media (max-width:600px){ header .wrap > a { display:none; } }
+  footer { background:var(--navy); color:#9fb0cc; border-top:0; }
 </style>
 </head>
 <body>

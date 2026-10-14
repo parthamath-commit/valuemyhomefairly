@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Value My Home Fairly — Ohio property tax value check</title>
 <meta name="description" content="Free check of your Ohio county home value against recent sales of similar homes nearby, and an honest answer on whether an appeal is worth it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root { --ink:#17202a; --muted:#56606b; --line:#dfe3e8; --bg:#f7f8fa; --brand:#1d5fb8; --brand-dark:#164a90; }
   * { box-sizing:border-box; }
@@ -36,6 +37,33 @@
   .hp { position:absolute; left:-9999px; }
   footer { border-top:1px solid var(--line); background:#fff; padding:22px 0 30px; font-size:.82rem; color:var(--muted); margin-top:32px; }
   @media (max-width:760px){ .grid, .row { grid-template-columns:1fr; } .hero { padding-top:32px; } }
+  /* ===== Navy professional theme ===== */
+  :root { --navy:#0b1f3a; --navy-2:#132d52; --brand:#1e4a8c; --brand-dark:#163a70; --gold:#c9a44c; --ink:#14213a; --muted:#5a6578; --line:#e3e7ee; --bg:#f5f7fb; --ok:#1d7a47; }
+  body { font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--navy); border-bottom:0; }
+  header .logo, header a { color:#fff !important; }
+  .logo { letter-spacing:-.01em; } .logo span { color:var(--gold) !important; }
+  .hero { position:relative; background:var(--navy); color:#fff; box-shadow:0 0 0 100vmax var(--navy); clip-path:inset(0 -100vmax); padding-bottom:48px !important; margin-bottom:28px; }
+  .hero h1 { color:#fff; font-weight:800; }
+  .hero .lead { color:#c8d3e6; }
+  .hero > div > .fine, .hero .fine { color:#9fb0cc; }
+  .hero .stat { background:var(--navy-2); border-color:#24426f; }
+  .hero .stat b { color:var(--gold); }
+  .hero .stat small { color:#c8d3e6; }
+  .hero .card { color:var(--ink); box-shadow:0 18px 40px rgba(3,12,30,.35); border:0; }
+  .card { border-color:var(--line); box-shadow:0 1px 3px rgba(11,31,58,.06); }
+  h2 { color:var(--navy); letter-spacing:-.015em; }
+  .btn, button { background:var(--brand); }
+  .btn:hover, button:hover { background:var(--brand-dark); }
+  .live { border:0 !important; background:linear-gradient(135deg,#ffffff,#eef3fb); border-left:5px solid var(--gold) !important; }
+  .step .n { background:var(--navy); color:var(--gold); }
+  .featured { border:2px solid var(--navy) !important; position:relative; }
+  .featured::before { content:"Most guidance"; position:absolute; top:-12px; right:16px; background:var(--gold); color:var(--navy); font-size:.72rem; font-weight:800; padding:3px 10px; border-radius:999px; }
+  input:focus, select:focus { outline:3px solid rgba(30,74,140,.2); border-color:var(--brand); }
+  .hero .card .fine { color:var(--muted); }
+  .hero { margin-bottom:0 !important; } main > .hero + * { margin-top:28px; }
+  @media (max-width:600px){ header .wrap > a { display:none; } }
+  footer { background:var(--navy); color:#9fb0cc; border-top:0; }
 </style>
 </head>
 <body>
@@ -171,6 +199,18 @@
   </div>
 
   <div class="card">
+    <h2 style="margin-top:0">What is Value My Home Fairly?</h2>
+    <p>Your property tax is based on the value your County Auditor puts on your home, not on what it would actually sell for. If that value is too high, you overpay every year until it's corrected. Ohio lets every owner challenge it, but most people don't know whether their value is wrong or how to prove it.</p>
+    <p style="margin-bottom:0"><b>What you get:</b></p>
+    <ul style="color:var(--muted);margin-top:6px">
+      <li><b>A free check</b> of your county value against 3–5 recent sales of similar homes nearby, plus a scan of your county record for errors such as wrong square footage.</li>
+      <li><b>An honest verdict:</b> likely too high, borderline, or fair. If it's fair, we tell you not to file.</li>
+      <li><b>A $59 evidence packet</b> if an appeal looks worth it: comparable-sales table, complaint-form (DTE 1) entries filled in, filing checklist and a short hearing script. You sign and file it yourself.</li>
+      <li><b>A $149 option</b> that adds a 30-minute call to walk through your case and prepare you for the hearing.</li>
+    </ul>
+  </div>
+
+  <div class="card">
     <h2 style="margin-top:0">How much could you save?</h2>
     <table class="ex">
       <tr><td>County value of your home</td><td>$400,000</td></tr>
@@ -179,6 +219,19 @@
       <tr class="hl"><td>Tax saved per year (at about 2% effective rate)</td><td>≈ $1,000</td></tr>
     </table>
     <p class="fine">Illustrative example only. Tax rates differ by county and school district, and results depend on your home and the Board of Revision's decision. Some appeals don't succeed, and the Board can also raise a value.</p>
+  </div>
+
+
+  <div class="card">
+    <h2 style="margin-top:0">Key dates in Ohio</h2>
+    <table class="ex">
+      <tr><td><b>Now</b></td><td>Join the list for your county (free)</td></tr>
+      <tr><td><b>When your county opens</b></td><td>We email your free check result</td></tr>
+      <tr><td><b>Jan 1 – Mar 31</b></td><td>The only window each year to file a complaint with your county Board of Revision</td></tr>
+      <tr><td><b>After filing</b></td><td>A short hearing where you present your comparable sales</td></tr>
+      <tr><td><b>Following tax bill</b></td><td>Lower value shows on your bill if the Board agrees</td></tr>
+    </table>
+    <p class="fine">Best candidates: you bought recently for less than the County's value, your County record has errors (like extra square footage), or your value jumped more than your neighbors'. We're not lawyers or appraisers and we never file for you. Self-help information only.</p>
   </div>
 
   <div class="card">
