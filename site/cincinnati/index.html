@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamilton County Home Value Check — Value My Home Fairly</title>
+<meta name="description" content="Free check of your Hamilton County home value against recent sales of similar homes. Join the list and we'll check your new 2026 value as soon as it's posted.">
+<style>
+  :root { --ink:#17202a; --muted:#56606b; --line:#dfe3e8; --bg:#f7f8fa; --brand:#1d5fb8; --brand-dark:#164a90; --ok:#1d7a47; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header { background:#fff; border-bottom:1px solid var(--line); }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px; }
+  .logo { font-weight:800; font-size:1.15rem; letter-spacing:-.01em; }
+  .logo span { color:var(--brand); }
+  .hero { padding: 48px 0 24px; display:grid; grid-template-columns: 1.15fr 1fr; gap:36px; align-items:start; }
+  h1 { font-size: clamp(1.9rem, 4.5vw, 2.7rem); line-height:1.12; margin:0 0 14px; letter-spacing:-.02em; }
+  .lead { font-size:1.15rem; color:var(--muted); margin:0 0 20px; }
+  .stats { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin:22px 0 8px; }
+  .stat { background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; }
+  .stat b { display:block; font-size:1.45rem; letter-spacing:-.01em; }
+  .stat small { color:var(--muted); font-size:.82rem; line-height:1.35; display:block; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+  form label { display:block; font-weight:600; font-size:.92rem; margin:12px 0 5px; }
+  form .opt { font-weight:400; color:var(--muted); }
+  input[type=text], input[type=email], input[type=tel], select { width:100%; font:inherit; padding:11px 12px; border:1px solid #b8c0c9; border-radius:9px; background:#fff; }
+  input:focus, select:focus { outline: 3px solid rgba(29,95,184,.25); border-color: var(--brand); }
+  .row { display:grid; grid-template-columns: 2fr 1fr; gap:10px; }
+  .check { display:flex; gap:10px; align-items:flex-start; font-weight:400 !important; font-size:.88rem !important; color:var(--muted); }
+  .check input { margin-top:4px; }
+  button { margin-top:16px; width:100%; font:inherit; font-weight:700; font-size:1.05rem; background:var(--brand); color:#fff; border:0; border-radius:10px; padding:14px; cursor:pointer; }
+  button:hover { background:var(--brand-dark); }
+  .fine { font-size:.8rem; color:var(--muted); margin-top:10px; }
+  section { padding: 28px 0; }
+  h2 { font-size:1.5rem; letter-spacing:-.01em; margin:0 0 14px; }
+  .steps { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+  .step .n { width:30px; height:30px; border-radius:50%; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:700; margin-bottom:8px; }
+  .step h3 { margin:0 0 6px; font-size:1.05rem; }
+  .step p { margin:0; color:var(--muted); font-size:.95rem; }
+  .price { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+  .price .card h3 { margin:0; font-size:1rem; }
+  .price .amt { font-size:1.8rem; font-weight:800; margin:6px 0; }
+  .price p { margin:0; color:var(--muted); font-size:.92rem; }
+  .featured { border:2px solid var(--brand); }
+  details { background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin-bottom:10px; }
+  summary { font-weight:600; cursor:pointer; }
+  details p { color:var(--muted); margin:10px 0 2px; }
+  footer { border-top:1px solid var(--line); background:#fff; padding:22px 0 30px; font-size:.82rem; color:var(--muted); }
+  table.ex { width:100%; border-collapse:collapse; }
+  table.ex td { padding:9px 4px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ex td:last-child { text-align:right; font-weight:600; }
+  table.ex tr.hl td { color:var(--ok); font-size:1.08rem; font-weight:800; }
+  .hp { position:absolute; left:-9999px; }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top:28px; gap:20px; }
+    .steps, .price { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" class="logo" style="color:inherit;text-decoration:none">Value My Home <span>Fairly</span></a>
+  <a href="#join" style="color:var(--brand);font-weight:600;text-decoration:none">Get my free check</a>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Is your new Hamilton County home value too high?</h1>
+      <p class="lead">The County is setting new values for tax year 2026. We'll compare yours against recent sales of similar homes near you, free, and tell you honestly whether an appeal is worth it.</p>
+      <div class="stats">
+        <div class="stat"><b>50–66%</b><small>of Hamilton County homeowners who appealed in recent years won a reduction*</small></div>
+        <div class="stat"><b>Jan 1–Mar 31</b><small>the only window to file an appeal with the Board of Revision</small></div>
+        <div class="stat"><b>$0</b><small>for the check. If your value looks fair, we'll tell you not to file.</small></div>
+      </div>
+      <p class="fine">*Reported by WKRC Local 12 from Hamilton County Board of Revision data. Past results don't predict yours.</p>
+    </div>
+
+    <div class="card" id="join">
+      <h2 style="margin-bottom:4px">Get your free value check</h2>
+      <p class="fine" style="margin-top:0">Join the list now. We'll run your check as soon as the Auditor posts final 2026 values and email you the result before the filing window opens.</p>
+      <form name="waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="waitlist">
+        <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <div class="row">
+          <div><label for="address">Home street address</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" placeholder="1234 Main St" required></div>
+          <div><label for="zip">ZIP</label>
+          <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
+        </div>
+        <label for="phone">Phone <span class="opt">(optional, only for the $149 review)</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <label for="source">How did you hear about us?</label>
+        <select id="source" name="source">
+          <option value="">Choose one</option>
+          <option>My realtor or lender</option>
+          <option>Nextdoor</option>
+          <option>Facebook group</option>
+          <option>Flyer</option>
+          <option>Friend or neighbor</option>
+          <option>Search / other</option>
+        </select>
+        <input type="hidden" name="ref" id="ref">
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> Email me my check result and filing reminders. I can unsubscribe anytime.</label>
+        <button type="submit">Check my value — free</button>
+        <p class="fine">We use public records plus what you give us. We never sell your information.</p>
+      </form>
+    </div>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="card step"><div class="n">1</div><h3>Free check</h3><p>We compare your County value with 3–5 recent sales of similar homes nearby and look for errors in your County record, like wrong square footage.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Honest answer</h3><p>Likely too high, borderline, or fair. If it's fair or low, we'll tell you not to file. Appeals can also raise a value.</p></div>
+      <div class="card step"><div class="n">3</div><h3>You file, prepared</h3><p>If it's worth it, get an evidence packet with your comparable sales and complaint-form entries filled in. You sign and file it yourself.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How much could you save?</h2>
+    <div class="card">
+      <table class="ex">
+        <tr><td>County value of your home</td><td>$400,000</td></tr>
+        <tr><td>Value supported by recent nearby sales</td><td>$350,000</td></tr>
+        <tr><td>Too high by</td><td>$50,000</td></tr>
+        <tr class="hl"><td>Tax saved per year (at about 2% effective rate)</td><td>≈ $1,000</td></tr>
+        <tr><td>Until the next county reappraisal (often up to 3 years)</td><td>up to ≈ $3,000</td></tr>
+      </table>
+      <p class="fine">Illustrative example only. Your savings depend on your home, your tax district's rate and the Board of Revision's decision. Some appeals don't succeed, and the Board can also raise a value. That's why we tell you when not to file.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key dates</h2>
+    <div class="card">
+      <table class="ex">
+        <tr><td><b>Now</b></td><td>Join the list (free)</td></tr>
+        <tr><td><b>Late Nov–Dec 2026</b></td><td>County posts final 2026 values; we email your free check</td></tr>
+        <tr><td><b>Jan 1 – Mar 31, 2027</b></td><td>The only window to file your complaint with the Board of Revision</td></tr>
+        <tr><td><b>Spring–summer 2027</b></td><td>Short hearing where you present your comparable sales</td></tr>
+        <tr><td><b>Following tax bill</b></td><td>Lower value shows on your bill if the Board agrees</td></tr>
+      </table>
+      <p class="fine">Best candidates: you bought recently for less than the County's value, your County record has errors (like extra square footage), or your value jumped more than your neighbors'.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Simple pricing</h2>
+    <div class="price">
+      <div class="card"><h3>Value check</h3><div class="amt">Free</div><p>Your value vs. nearby sales, record errors, and the filing deadline.</p></div>
+      <div class="card"><h3>Evidence packet</h3><div class="amt">$59</div><p>Comparable-sales table, complaint-form entries, filing checklist and a 3-minute hearing script. Only offered if your numbers support an appeal.</p></div>
+      <div class="card featured"><h3>Packet + local review</h3><div class="amt">$149</div><p>Everything in the packet, plus a 30-minute call with a Cincinnati neighbor who walks through your case and prepares you for the hearing.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details><summary>Is this the County Auditor?</summary><p>No. Value My Home Fairly is an independent service, started in Cincinnati, from Pal Initiatives LLC. We are not affiliated with Hamilton County, the Auditor or the Board of Revision.</p></details>
+    <details><summary>Are you lawyers or appraisers?</summary><p>No. We prepare factual information from public records to help you file your own complaint. We don't file for you, represent you or give legal advice. For complex or commercial cases we'll point you to an attorney.</p></details>
+    <details><summary>Could appealing raise my value?</summary><p>Yes, the Board can keep, lower or raise a value. That's why our check tells you when not to file.</p></details>
+    <details><summary>When can I file?</summary><p>Ohio complaints are filed with the County Board of Revision between January 1 and March 31. Join the list and we'll remind you.</p></details>
+    <details><summary>What happens to my information?</summary><p>We use your address to look up public property records and your email to send your result and reminders. We don't sell or share it, and we'll delete it on request.</p></details>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  Value My Home Fairly · Pal Initiatives LLC · Cincinnati, Ohio<br>
+  Self-help information from public records. Not legal advice or an appraisal. Not affiliated with Hamilton County. Results are not guaranteed.
+</div></footer>
+
+<script>
+  // Capture realtor/partner referral codes from links like ?ref=jsmith so we know which partner sent each signup.
+  try { const r = new URLSearchParams(location.search).get('ref'); if (r) document.getElementById('ref').value = r.slice(0, 40); } catch (e) {}
+</script>
+</body>
+</html>
