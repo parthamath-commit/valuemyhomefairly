@@ -106,6 +106,16 @@
   .trust span::before { content:"✓ "; color:var(--ok); font-weight:800; }
   @media (max-width:600px){ .calc-row { grid-template-columns:1fr; } }
   footer { background:var(--navy); color:#9fb0cc; border-top:0; }
+
+  /* mobile tap targets */
+  @media (max-width:600px){
+    summary{padding:6px 0;min-height:44px;align-items:center}
+    .check input, input[type=checkbox]{width:22px;height:22px;flex:0 0 22px}
+    footer a, .note a, .fine a, details a{display:inline-block;padding:8px 0}
+    .elsewhere button{padding:10px 4px}
+    a.btn{white-space:normal;text-align:center}
+    input, select{font-size:16px}
+  }
 </style>
 </head>
 <body>
@@ -240,12 +250,14 @@
     <details><summary>Are you lawyers or appraisers?</summary><p>No. We prepare factual information from public records to help you file your own complaint. We don't file for you, represent you or give legal advice. For complex or commercial cases we'll point you to an attorney.</p></details>
     <details><summary>Could appealing raise my value?</summary><p>Yes, the Board can keep, lower or raise a value. That's why our check tells you when not to file.</p></details>
     <details><summary>When can I file?</summary><p>Ohio complaints are filed with the County Board of Revision between January 1 and March 31. Join the list and we'll remind you.</p></details>
+    <details><summary>How do I order and pay?</summary><p>Nothing to pay now. After your free check, if filing makes sense, your result email includes a link to order the $59 packet or the $149 packet with review call. You pay securely by card through Stripe, and the packet arrives by email. Paid packets open in January.</p></details>
+    <details><summary>How do I contact you?</summary><p>Email <a href="mailto:hello@valuemyhomefairly.com">hello@valuemyhomefairly.com</a>. We usually reply within one business day.</p></details>
     <details><summary>What happens to my information?</summary><p>We use your address to look up public property records and your email to send your result and reminders. We don't sell or share it, and we'll delete it on request.</p></details>
   </section>
 </main>
 
 <footer><div class="wrap">
-  Value My Home Fairly · Cincinnati, Ohio<br>
+  Value My Home Fairly · Cincinnati, Ohio · <a href="mailto:hello@valuemyhomefairly.com" style="color:inherit">hello@valuemyhomefairly.com</a><br>
   Self-help information from public records. Not legal advice or an appraisal. Not affiliated with Hamilton County. Results are not guaranteed.
 </div></footer>
 

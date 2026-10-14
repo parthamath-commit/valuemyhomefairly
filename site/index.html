@@ -11,6 +11,7 @@
   :root{--ink:#13233D;--head:#0E2340;--paper:#F3F5F8;--card:#FFFFFF;--gold:#C9A44C;--red:#B4402F;--green:#2E7D5B;--muted:#56637A;--rule:#D9DEE7;}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  section{scroll-margin-top:62px}
   body{margin:0;font:18px/1.6 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-variant-numeric:tabular-nums}
   a{color:inherit}
   :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
@@ -160,12 +161,22 @@
     .formcard{padding:24px}
     .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;text-align:center;background:var(--gold);color:var(--head);font-weight:800;padding:15px;border-radius:10px;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.3);transition:opacity .2s}
   }
+
+  /* mobile tap targets */
+  @media (max-width:600px){
+    summary{padding:6px 0;min-height:44px;align-items:center}
+    .check input, input[type=checkbox]{width:22px;height:22px;flex:0 0 22px}
+    footer a, .note a, .fine a, details a{display:inline-block;padding:8px 0}
+    .elsewhere button{padding:10px 4px}
+    a.btn{white-space:normal;text-align:center}
+    input, select{font-size:16px}
+  }
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <a class="logo" href="/">Value My Home <i>Fairly</i></a>
-  <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a class="go" href="#join">Free check</a></nav>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="go" href="#join">Free check</a></nav>
 </div></header>
 
 <main>
@@ -251,6 +262,20 @@
       <li class="key"><b>Jan 1 – Mar 31</b><span>File with your county Board of Revision</span></li>
       <li><b>After filing</b><span>A short hearing, then a lower value on your bill if the Board agrees</span></li>
     </ol>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <h2>How ordering and payment work</h2>
+    <p class="sub measure">Nothing to pay today. You only buy something after you've seen your result and decided it's worth it.</p>
+    <ol class="when">
+      <li><b>Join the list</b><span>Free. Fill in the form below with your county and address.</span></li>
+      <li><b>Get your result by email</b><span>Your free check: too high, borderline, or fair. If it's fair, that's the end. No charge, no follow-up sales.</span></li>
+      <li><b>Order your packet</b><span>If filing makes sense, the email includes a link to order the $59 packet or the $149 packet with review call.</span></li>
+      <li><b>Pay securely by card</b><span>Checkout runs on Stripe; we never see your card number. Your packet arrives by email right away.</span></li>
+    </ol>
+    <p class="note">Paid packets open in January, when the filing window starts. Questions before then? Email <a href="mailto:hello@valuemyhomefairly.com">hello@valuemyhomefairly.com</a>.</p>
   </div>
 </section>
 
@@ -399,10 +424,18 @@
     <details><summary>What happens to my information?</summary><p>We use your address to look up public property records and your email to send your result and reminders. We never sell or share it, and we'll delete it on request.</p></details>
   </div>
 </section>
+<section id="contact">
+  <div class="wrap measure">
+    <h2>Contact us</h2>
+    <p>We answer by email, usually within one business day. Email is the best way to reach us; we don't take phone calls.</p>
+    <p><a class="btn btn-gold" href="mailto:hello@valuemyhomefairly.com">Email hello@valuemyhomefairly.com</a></p>
+    <p class="note">For your free check, use the form above so we have your county and address.</p>
+  </div>
+</section>
 </main>
 
 <footer><div class="wrap">
-  <b>Value My Home Fairly</b>, Cincinnati, Ohio.<br>
+  <b>Value My Home Fairly</b>, Cincinnati, Ohio. Contact: <a href="mailto:hello@valuemyhomefairly.com">hello@valuemyhomefairly.com</a><br>
   Self-help information from public records. Not legal advice or an appraisal. Not affiliated with any county government. Results are not guaranteed.
 </div></footer>
 
