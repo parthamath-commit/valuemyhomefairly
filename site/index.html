@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Value My Home Fairly — Is your property tax value too high?</title>
-<meta name="description" content="Free check of your county home value against recent sales of similar homes nearby, and an honest answer on whether an appeal is worth it.">
+<title>Value My Home Fairly — Ohio property tax value check</title>
+<meta name="description" content="Free check of your Ohio county home value against recent sales of similar homes nearby, and an honest answer on whether an appeal is worth it.">
 <style>
   :root { --ink:#17202a; --muted:#56606b; --line:#dfe3e8; --bg:#f7f8fa; --brand:#1d5fb8; --brand-dark:#164a90; }
   * { box-sizing:border-box; }
@@ -26,6 +26,13 @@
   label { display:block; font-weight:600; font-size:.92rem; margin:12px 0 5px; }
   input, select { width:100%; font:inherit; padding:11px 12px; border:1px solid #b8c0c9; border-radius:9px; background:#fff; }
   .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .fine { font-size:.8rem; color:var(--muted); margin-top:10px; }
+  .check { display:flex; gap:10px; align-items:flex-start; font-weight:400 !important; font-size:.88rem !important; color:var(--muted); }
+  .check input { width:auto; margin-top:4px; }
+  table.ex { width:100%; border-collapse:collapse; }
+  table.ex td { padding:9px 4px; border-bottom:1px solid var(--line); }
+  table.ex td:last-child { text-align:right; font-weight:600; }
+  table.ex tr.hl td { color:#1d7a47; font-weight:800; }
   .hp { position:absolute; left:-9999px; }
   footer { border-top:1px solid var(--line); background:#fff; padding:22px 0 30px; font-size:.82rem; color:var(--muted); margin-top:32px; }
   @media (max-width:760px){ .grid, .row { grid-template-columns:1fr; } .hero { padding-top:32px; } }
@@ -35,24 +42,148 @@
 <header><div class="wrap"><div class="logo">Value My Home <span>Fairly</span></div></div></header>
 <main class="wrap">
   <div class="hero">
-    <h1>Is your home's tax value too high?</h1>
-    <p class="lead">We compare your county's value with recent sales of similar homes nearby, free, and tell you honestly whether an appeal is worth it. If it is, we help you file it yourself, fully prepared.</p>
+    <h1>Is your Ohio home's tax value too high?</h1>
+    <p class="lead">We compare your county's value with recent sales of similar homes nearby, free, and tell you honestly whether an appeal is worth it. If it is, we help you file it yourself with the Board of Revision, fully prepared.</p>
   </div>
 
   <div class="card live">
-    <div><h2>Now open: Hamilton County, Ohio</h2><p>New 2026 values are coming. Appeals are filed Jan 1 – Mar 31.</p></div>
-    <a class="btn" href="/cincinnati/">Get my free check →</a>
+    <div><h2>Open now: Hamilton County (Cincinnati)</h2><p>Other Ohio counties: join the list below and we'll tell you when yours opens.</p></div>
+    <a class="btn" href="/cincinnati/">Hamilton County check →</a>
   </div>
 
   <div class="grid">
     <div class="card"><h3>Free check</h3><p>Your value vs. 3–5 recent nearby sales, plus errors in your county record.</p></div>
     <div class="card"><h3>Honest answer</h3><p>Too high, borderline, or fair. If it's fair, we'll tell you not to file.</p></div>
-    <div class="card"><h3>You file, prepared</h3><p>An evidence packet with comparable sales and the form entries filled in.</p></div>
+    <div class="card"><h3>You file, prepared</h3><p>An evidence packet with comparable sales and the complaint-form entries filled in.</p></div>
   </div>
 
-  <div class="card" id="notify">
-    <h2 style="margin-top:0">Not in Hamilton County?</h2>
-    <p style="color:var(--muted);margin-top:0">Tell us where you live. We open new counties where the most people ask.</p>
+  <div class="card" id="join">
+    <h2 style="margin-top:0">Join the list for your county</h2>
+    <p style="color:var(--muted);margin-top:0">All 88 Ohio counties use the same appeal process: a complaint to your county Board of Revision, filed between January 1 and March 31. We're opening counties one at a time, starting with Hamilton, and we open next where the most people ask.</p>
+    <form name="ohio-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="ohio-waitlist">
+      <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <label for="o-county">Your county</label>
+      <select id="o-county" name="county" required>
+            <option value="">Choose your county</option>
+            <option>Adams</option>
+            <option>Allen</option>
+            <option>Ashland</option>
+            <option>Ashtabula</option>
+            <option>Athens</option>
+            <option>Auglaize</option>
+            <option>Belmont</option>
+            <option>Brown</option>
+            <option>Butler</option>
+            <option>Carroll</option>
+            <option>Champaign</option>
+            <option>Clark</option>
+            <option>Clermont</option>
+            <option>Clinton</option>
+            <option>Columbiana</option>
+            <option>Coshocton</option>
+            <option>Crawford</option>
+            <option>Cuyahoga</option>
+            <option>Darke</option>
+            <option>Defiance</option>
+            <option>Delaware</option>
+            <option>Erie</option>
+            <option>Fairfield</option>
+            <option>Fayette</option>
+            <option>Franklin</option>
+            <option>Fulton</option>
+            <option>Gallia</option>
+            <option>Geauga</option>
+            <option>Greene</option>
+            <option>Guernsey</option>
+            <option>Hamilton</option>
+            <option>Hancock</option>
+            <option>Hardin</option>
+            <option>Harrison</option>
+            <option>Henry</option>
+            <option>Highland</option>
+            <option>Hocking</option>
+            <option>Holmes</option>
+            <option>Huron</option>
+            <option>Jackson</option>
+            <option>Jefferson</option>
+            <option>Knox</option>
+            <option>Lake</option>
+            <option>Lawrence</option>
+            <option>Licking</option>
+            <option>Logan</option>
+            <option>Lorain</option>
+            <option>Lucas</option>
+            <option>Madison</option>
+            <option>Mahoning</option>
+            <option>Marion</option>
+            <option>Medina</option>
+            <option>Meigs</option>
+            <option>Mercer</option>
+            <option>Miami</option>
+            <option>Monroe</option>
+            <option>Montgomery</option>
+            <option>Morgan</option>
+            <option>Morrow</option>
+            <option>Muskingum</option>
+            <option>Noble</option>
+            <option>Ottawa</option>
+            <option>Paulding</option>
+            <option>Perry</option>
+            <option>Pickaway</option>
+            <option>Pike</option>
+            <option>Portage</option>
+            <option>Preble</option>
+            <option>Putnam</option>
+            <option>Richland</option>
+            <option>Ross</option>
+            <option>Sandusky</option>
+            <option>Scioto</option>
+            <option>Seneca</option>
+            <option>Shelby</option>
+            <option>Stark</option>
+            <option>Summit</option>
+            <option>Trumbull</option>
+            <option>Tuscarawas</option>
+            <option>Union</option>
+            <option>Van Wert</option>
+            <option>Vinton</option>
+            <option>Warren</option>
+            <option>Washington</option>
+            <option>Wayne</option>
+            <option>Williams</option>
+            <option>Wood</option>
+            <option>Wyandot</option>
+      </select>
+      <p id="ham-note" class="fine" style="display:none">Hamilton County is open now. <a href="/cincinnati/">Use the Hamilton County page</a> for the fastest check.</p>
+      <div class="row">
+        <div><label for="o-name">Your name</label><input id="o-name" name="name" type="text" autocomplete="name" required></div>
+        <div><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="row">
+        <div><label for="o-address">Home street address</label><input id="o-address" name="address" type="text" autocomplete="street-address" required></div>
+        <div><label for="o-zip">ZIP</label><input id="o-zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
+      </div>
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> Email me when my county opens, plus my check result and filing reminders. I can unsubscribe anytime.</label>
+      <button class="btn" type="submit" style="margin-top:16px;width:100%">Join the list — free</button>
+      <p class="fine">We use public records plus what you give us. We never sell your information.</p>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">How much could you save?</h2>
+    <table class="ex">
+      <tr><td>County value of your home</td><td>$400,000</td></tr>
+      <tr><td>Value supported by recent nearby sales</td><td>$350,000</td></tr>
+      <tr><td>Too high by</td><td>$50,000</td></tr>
+      <tr class="hl"><td>Tax saved per year (at about 2% effective rate)</td><td>≈ $1,000</td></tr>
+    </table>
+    <p class="fine">Illustrative example only. Tax rates differ by county and school district, and results depend on your home and the Board of Revision's decision. Some appeals don't succeed, and the Board can also raise a value.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Not in Ohio?</h2>
+    <p style="color:var(--muted);margin-top:0">Tell us where you live and we'll let you know if we come to your state.</p>
     <form name="expansion" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="expansion">
       <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -64,7 +195,7 @@
         <div><label for="e-county">County</label><input id="e-county" name="county" type="text" required></div>
         <div><label for="e-state">State</label><input id="e-state" name="state" type="text" maxlength="20" required></div>
       </div>
-      <button class="btn" type="submit" style="margin-top:16px;width:100%">Notify me when you open my county</button>
+      <button class="btn" type="submit" style="margin-top:16px;width:100%">Notify me</button>
     </form>
   </div>
 </main>
@@ -72,5 +203,8 @@
   Value My Home Fairly · Pal Initiatives LLC · Cincinnati, Ohio<br>
   Self-help information from public records. Not legal advice or an appraisal. Not affiliated with any county government. Results are not guaranteed.
 </div></footer>
+<script>
+  try { const s=document.getElementById("o-county"), n=document.getElementById("ham-note"); s.addEventListener("change",()=>{ n.style.display = s.value==="Hamilton" ? "block" : "none"; }); } catch(e) {}
+</script>
 </body>
 </html>
