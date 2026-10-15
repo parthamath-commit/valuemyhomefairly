@@ -40,16 +40,16 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Online feedback through Aug 9, 2026",
+   "notes": "Value notices mailed week of Jul 20 2026 (Star Beacon, Jul 23 2026)."
   },
   "Athens": {
    "reappraisal": 2026,
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Jul 29\u201331, 2026 (appointment only)",
+   "notes": "Preliminary values on auditor website; postcards mailed (Athens County Independent, Aug 4 2026)."
   },
   "Auglaize": {
    "reappraisal": 2029,
@@ -111,9 +111,9 @@
    "reappraisal": 2026,
    "update": 2029,
    "scheduleChanged2026": false,
-   "valueNoticesPosted": null,
+   "valueNoticesPosted": "2026-07-08",
    "informalReview": null,
-   "notes": ""
+   "notes": "Tentative 2026 values available Jul 8 2026 (Clermont County Auditor press release)."
   },
   "Clinton": {
    "reappraisal": 2030,
@@ -208,8 +208,8 @@
    "update": 2026,
    "scheduleChanged2026": true,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Review sessions through Sep 5, 2026 (virtual, in person, or documents only)",
+   "notes": "Final values expected Dec 2026 (Franklin County Auditor news, Aug 4 2026)."
   },
   "Fulton": {
    "reappraisal": 2026,
@@ -240,8 +240,8 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Jul 13\u201324, 2026 (appointment only)",
+   "notes": "Tentative value notices mailed June 2026; final values Dec 2026 (Greene County 2026 Property Revaluation page)."
   },
   "Guernsey": {
    "reappraisal": 2027,
