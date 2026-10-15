@@ -129,13 +129,14 @@
     <div>
       <span class="eyebrow">Hamilton County · 2026 reappraisal</span>
       <h1>Paying tax on a value your home <em>couldn't sell for?</em></h1>
-      <p class="lead">If the County values your home $50,000 too high, you pay about <b style="color:#fff">$1,000 extra every year</b>. Try your numbers below, then get a free check against real nearby sales.</p>
-      <div class="calc" aria-label="Savings estimate">
+      <p class="lead">If the County values your home $50,000 too high, you pay about <b style="color:#fff">$720 extra every year</b>. Try your numbers below, then get a free check against real nearby sales.</p>
+      <div class="calc" aria-label="Fair value calculator">
+        <b style="display:block;color:#fff;font-size:1.05rem;margin-bottom:10px">Fair value calculator</b>
         <div class="calc-row">
           <label>County's value of your home<input id="cv" type="text" inputmode="numeric" value="400,000"></label>
           <label>What similar homes sold for<input id="mv" type="text" inputmode="numeric" value="350,000"></label>
         </div>
-        <div class="calc-out"><span>You may be overpaying about</span><b id="peryr">$1,000 / year</b><small id="per3">≈ $3,000 until the next reappraisal · at ~2% effective tax rate</small></div>
+        <div class="calc-out"><span>You may be overpaying about</span><b id="peryr">$720 / year</b><small id="per3">≈ $2,160 until the next reappraisal · at Hamilton County's 1.44% average effective tax rate (SmartAsset)</small></div>
         <a class="btn gold" href="#join">Check my home free →</a>
       </div>
       <div class="stats">
@@ -196,6 +197,7 @@
     </div>
   </div>
 
+  <p style="background:#FAF6EA;border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:22px 0 0;font-size:1rem"><strong>Up to 4 in 10 U.S. homes may be over-assessed, yet fewer than 1 in 20 owners ever appeal.</strong><span style="display:block;font-size:.8rem;color:var(--muted)">Sources: Realtor.com 2025 Property Tax Report; National Taxpayers Union.</span></p>
   <div class="trust"><span>Free check</span><span>Real nearby sales</span><span>We tell you if it's not worth filing</span><span>You stay in control</span></div>
 
   <section>
@@ -214,8 +216,8 @@
         <tr><td>County value of your home</td><td>$400,000</td></tr>
         <tr><td>Value supported by recent nearby sales</td><td>$350,000</td></tr>
         <tr><td>Too high by</td><td>$50,000</td></tr>
-        <tr class="hl"><td>Tax saved per year (at about 2% effective rate)</td><td>≈ $1,000</td></tr>
-        <tr><td>Until the next county reappraisal (often up to 3 years)</td><td>up to ≈ $3,000</td></tr>
+        <tr class="hl"><td>Tax saved per year (at Hamilton County's ~1.44% average effective rate)</td><td>≈ $720</td></tr>
+        <tr><td>Until the next county reappraisal (often up to 3 years)</td><td>up to ≈ $2,160</td></tr>
       </table>
       <p class="fine">Illustrative example only. Your savings depend on your home, your tax district's rate and the Board of Revision's decision. Some appeals don't succeed, and the Board can also raise a value. That's why we tell you when not to file.</p>
     </div>
@@ -269,7 +271,7 @@
   try {
     const n=s=>Number(String(s).replace(/[^0-9.]/g,''))||0, f=x=>'$'+Math.round(x).toLocaleString();
     const cv=document.getElementById('cv'), mv=document.getElementById('mv'), a=document.getElementById('peryr'), b=document.getElementById('per3');
-    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=gap*0.02; a.textContent = gap>0 ? f(Math.round(yr/10)*10)+' / year' : 'Looks fair'; b.textContent = gap>0 ? '≈ '+f(Math.round(yr*3/10)*10)+' until the next reappraisal · at ~2% effective tax rate' : "If your value is at or below what homes sell for, we'll tell you not to file."; };
+    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=gap*0.0144; a.textContent = gap>0 ? f(Math.round(yr/10)*10)+' / year' : 'Looks fair'; b.textContent = gap>0 ? '≈ '+f(Math.round(yr*3/10)*10)+' until the next reappraisal · at Hamilton County\'s 1.44% average effective tax rate (SmartAsset)' : "If your value is at or below what homes sell for, we'll tell you not to file."; };
     [cv,mv].forEach(i=>{ i.addEventListener('input',upd); i.addEventListener('blur',()=>{ i.value=n(i.value).toLocaleString(); }); });
   } catch(e) {}
 </script>

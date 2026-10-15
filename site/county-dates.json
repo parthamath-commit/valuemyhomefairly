@@ -1,0 +1,719 @@
+{
+ "lastChecked": "2026-10-15",
+ "filingWindow": {
+  "opens": "2027-01-01",
+  "closes": "2027-03-31",
+  "taxYear": 2026,
+  "note": "Ohio law: complaints for tax year 2026 go to the county Board of Revision Jan 1 \u2013 Mar 31, 2027."
+ },
+ "sources": [
+  "Ohio Dept. of Taxation, Year of Sexennial Reappraisal and Update 2025\u20132030",
+  "Ohio Dept. of Taxation bulletin, Jan 15 2026 (16 counties' reappraisal moved)"
+ ],
+ "counties": {
+  "Adams": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Allen": {
+   "reappraisal": 2027,
+   "update": 2030,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Ashland": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Ashtabula": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Athens": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Auglaize": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Belmont": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Brown": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Butler": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Carroll": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Champaign": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Clark": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Clermont": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Clinton": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Columbiana": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Coshocton": {
+   "reappraisal": 2027,
+   "update": 2030,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Crawford": {
+   "reappraisal": 2031,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Cuyahoga": {
+   "reappraisal": 2031,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Darke": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Defiance": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Delaware": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Erie": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Fairfield": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Fayette": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Franklin": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Fulton": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Gallia": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Geauga": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Greene": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Guernsey": {
+   "reappraisal": 2027,
+   "update": 2030,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Hamilton": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Hancock": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Hardin": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Harrison": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Henry": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Highland": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Hocking": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Holmes": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Huron": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Jackson": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Jefferson": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Knox": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Lake": {
+   "reappraisal": 2031,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Lawrence": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Licking": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Logan": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Lorain": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Lucas": {
+   "reappraisal": 2028,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Madison": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Mahoning": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Marion": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Medina": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Meigs": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Mercer": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Miami": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Monroe": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Montgomery": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Morgan": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Morrow": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Muskingum": {
+   "reappraisal": 2031,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Noble": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Ottawa": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Paulding": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Perry": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Pickaway": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Pike": {
+   "reappraisal": 2030,
+   "update": 2026,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Portage": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Preble": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Putnam": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Richland": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Ross": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Sandusky": {
+   "reappraisal": 2027,
+   "update": 2030,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Scioto": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Seneca": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Shelby": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Stark": {
+   "reappraisal": 2031,
+   "update": 2027,
+   "scheduleChanged2026": true,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Summit": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Trumbull": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Tuscarawas": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Union": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Van Wert": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Vinton": {
+   "reappraisal": 2027,
+   "update": 2030,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Warren": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Washington": {
+   "reappraisal": 2028,
+   "update": 2025,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Wayne": {
+   "reappraisal": 2026,
+   "update": 2029,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Williams": {
+   "reappraisal": 2030,
+   "update": 2027,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Wood": {
+   "reappraisal": 2029,
+   "update": 2026,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  },
+  "Wyandot": {
+   "reappraisal": 2025,
+   "update": 2028,
+   "scheduleChanged2026": false,
+   "valueNoticesPosted": null,
+   "informalReview": null,
+   "notes": ""
+  }
+ }
+}

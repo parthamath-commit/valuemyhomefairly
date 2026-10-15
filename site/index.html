@@ -32,6 +32,7 @@
   .hero{background:var(--head);color:#fff;padding:56px 0 72px}
   .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   h1{font-size:clamp(2.2rem,4.6vw,3.5rem);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin:0 0 20px}
+  .tag2{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:700;color:var(--gold);margin:-6px 0 18px;letter-spacing:-.01em}
   .hero p.lead{font-size:1.2rem;color:#C9D3E3;margin:0 0 28px;max-width:34ch}
   .hero p.lead strong{color:#fff}
   .btn{display:inline-block;font:inherit;font-weight:700;border:0;border-radius:10px;padding:15px 24px;text-decoration:none;cursor:pointer}
@@ -47,11 +48,28 @@
   .record-top b{color:var(--ink);font-size:.95rem}
   .rline{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--rule)}
   .rline label{font-size:.9rem;color:var(--muted)}
+  .rline select{font:inherit;font-size:.95rem;font-weight:600;color:var(--ink);border:1.5px solid #C3CBD8;border-radius:8px;padding:8px 10px;background:#fff;max-width:230px}
   .rline input{width:7.2ch;text-align:right;border:0;border-bottom:1.5px dashed #AEB8C8;font:inherit;font-weight:800;font-size:1.45rem;color:var(--ink);background:transparent;padding:2px 0}
   .rline input:focus{outline:none;border-bottom-color:var(--ink)}
   .money{position:relative;display:inline-flex;align-items:baseline;gap:0;font-weight:800;font-size:1.45rem}
   .county .money::after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:var(--red);transform-origin:left;transform:scaleX(1);border-radius:2px}
   .county input{color:#7A8597}
+  .dates .dpick{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+  .dates .dpick label{font-weight:700}
+  .dates select{font:inherit;padding:11px 14px;border:1.5px solid #C3CBD8;border-radius:8px;background:#fff;min-width:240px;color:var(--ink)}
+  .dout{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+  .dout > div{padding:18px 18px 4px 0}
+  .dout > div+div{padding-left:18px;border-left:1px solid var(--rule)}
+  .dout b.k{display:block;font-size:.85rem;color:var(--muted);font-weight:600}
+  .dout span.v{display:block;font-size:1.2rem;font-weight:800;margin:2px 0 4px}
+  .dout small{color:var(--muted);font-size:.85rem}
+  .dout .hot span.v{color:var(--red)}
+  .dout p.muted{grid-column:1/-1;color:var(--muted);padding-top:16px;margin:0}
+  @media (max-width:880px){.dout{grid-template-columns:1fr 1fr}.dout > div:nth-child(3){border-left:0;padding-left:0}}
+  @media (max-width:560px){.dout{grid-template-columns:1fr}.dout > div+div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+  .statline{background:#FAF6EA;border-bottom:1px solid var(--rule)}
+  .statline p{margin:0;padding:18px 0;font-size:1.05rem}
+  .statline span{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
   .stamp{display:inline-block;margin-left:10px;transform:rotate(-6deg);border:2.5px solid var(--red);color:var(--red);font-weight:900;font-size:.8rem;padding:3px 9px;border-radius:5px;opacity:.85;letter-spacing:.02em}
   .sales input{color:var(--green)}
   .total{background:#FAF6EA;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:2px solid var(--ink)}
@@ -152,7 +170,7 @@
     .hero-grid{display:flex;flex-direction:column;gap:18px}
     .hero .lead{margin:0}
     .hero-grid > div:first-child{display:contents}
-    .hero-grid h1{order:1} .hero .lead{order:2} .record{order:3} .hero .btn-gold:not(.record .btn){order:4} .btn-line{order:5;align-self:flex-start} .assure{order:6}
+    .hero-grid h1{order:1} .tag2{order:2;margin:0} .hero .lead{order:2} .record{order:3} .hero .btn-gold:not(.record .btn){order:4} .btn-line{order:5;align-self:flex-start} .assure{order:6}
     body{font-size:17px}
     section{padding:60px 0}
     .hero{padding:36px 0 56px}
@@ -183,22 +201,36 @@
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Ohio homeowners: your property tax is based on the County's number. Is it right?</h1>
-      <p class="lead">When the County values your home above what it would sell for, you pay extra every year. <strong>$50,000 too high costs about $1,000 a year.</strong> We check yours for free.</p>
+      <h1>Ohio homeowners: are you sure you're not paying excess property tax?</h1>
+      <p class="tag2">Verify and lower your property tax.</p>
+      <p class="lead">When the County values your home above what it would sell for, you pay extra every year. <strong>$50,000 too high costs about $600–$900 a year in most Ohio counties.</strong> We check yours for free.</p>
       <a class="btn btn-gold" href="#join">Get my free check</a><a class="btn btn-line" href="#how">How it works</a>
       <p class="assure">Free for Ohio homeowners. We tell you when not to file.</p>
     </div>
 
     <div class="record" aria-label="Try your numbers">
-      <div class="record-top"><b>Your home, by the numbers</b><span>Edit the amounts</span></div>
-            <div class="rline county"><label for="cv">County's value <span class="stamp" aria-hidden="true">Too high?</span></label><span class="money">$<input id="cv" inputmode="numeric" value="400,000" aria-label="County's value of your home in dollars"></span></div>
+      <div class="record-top"><b>Fair value calculator</b><span>Edit the amounts</span></div>
+            <div class="rline taxr"><label for="rc">Your county (tax rate)</label><select id="rc" aria-label="Your county"><option value="1.22" selected>Ohio average (1.22%)</option><option value="1.22">Adams (state avg.)</option><option value="1.06">Allen (1.06%)</option><option value="1.22">Ashland (state avg.)</option><option value="1.12">Ashtabula (1.12%)</option><option value="1.22">Athens (state avg.)</option><option value="1.22">Auglaize (state avg.)</option><option value="0.92">Belmont (0.92%)</option><option value="1.22">Brown (state avg.)</option><option value="1.18">Butler (1.18%)</option><option value="1.22">Carroll (state avg.)</option><option value="1.22">Champaign (state avg.)</option><option value="1.10">Clark (1.10%)</option><option value="1.20">Clermont (1.20%)</option><option value="1.22">Clinton (state avg.)</option><option value="0.90">Columbiana (0.90%)</option><option value="1.22">Coshocton (state avg.)</option><option value="1.22">Crawford (state avg.)</option><option value="1.80">Cuyahoga (1.80%)</option><option value="1.22">Darke (state avg.)</option><option value="1.22">Defiance (state avg.)</option><option value="1.53">Delaware (1.53%)</option><option value="1.14">Erie (1.14%)</option><option value="1.06">Fairfield (1.06%)</option><option value="1.22">Fayette (state avg.)</option><option value="1.40">Franklin (1.40%)</option><option value="1.22">Fulton (state avg.)</option><option value="1.22">Gallia (state avg.)</option><option value="1.23">Geauga (1.23%)</option><option value="1.40">Greene (1.40%)</option><option value="1.22">Guernsey (state avg.)</option><option value="1.44">Hamilton (1.44%)</option><option value="0.92">Hancock (0.92%)</option><option value="1.22">Hardin (state avg.)</option><option value="1.22">Harrison (state avg.)</option><option value="1.22">Henry (state avg.)</option><option value="1.22">Highland (state avg.)</option><option value="1.22">Hocking (state avg.)</option><option value="1.22">Holmes (state avg.)</option><option value="1.22">Huron (state avg.)</option><option value="1.22">Jackson (state avg.)</option><option value="1.22">Jefferson (state avg.)</option><option value="1.22">Knox (state avg.)</option><option value="1.50">Lake (1.50%)</option><option value="1.22">Lawrence (state avg.)</option><option value="1.08">Licking (1.08%)</option><option value="1.22">Logan (state avg.)</option><option value="1.22">Lorain (1.22%)</option><option value="1.55">Lucas (1.55%)</option><option value="1.22">Madison (state avg.)</option><option value="1.29">Mahoning (1.29%)</option><option value="0.92">Marion (0.92%)</option><option value="1.14">Medina (1.14%)</option><option value="1.22">Meigs (state avg.)</option><option value="1.22">Mercer (state avg.)</option><option value="0.91">Miami (0.91%)</option><option value="1.22">Monroe (state avg.)</option><option value="1.58">Montgomery (1.58%)</option><option value="1.22">Morgan (state avg.)</option><option value="1.22">Morrow (state avg.)</option><option value="0.81">Muskingum (0.81%)</option><option value="1.22">Noble (state avg.)</option><option value="1.22">Ottawa (state avg.)</option><option value="1.22">Paulding (state avg.)</option><option value="1.22">Perry (state avg.)</option><option value="1.22">Pickaway (state avg.)</option><option value="1.22">Pike (state avg.)</option><option value="1.17">Portage (1.17%)</option><option value="1.22">Preble (state avg.)</option><option value="1.22">Putnam (state avg.)</option><option value="1.13">Richland (1.13%)</option><option value="0.86">Ross (0.86%)</option><option value="1.22">Sandusky (state avg.)</option><option value="1.09">Scioto (1.09%)</option><option value="1.22">Seneca (state avg.)</option><option value="1.22">Shelby (state avg.)</option><option value="1.16">Stark (1.16%)</option><option value="1.45">Summit (1.45%)</option><option value="1.18">Trumbull (1.18%)</option><option value="1.04">Tuscarawas (1.04%)</option><option value="1.08">Union (1.08%)</option><option value="1.22">Van Wert (state avg.)</option><option value="1.22">Vinton (state avg.)</option><option value="1.08">Warren (1.08%)</option><option value="1.22">Washington (state avg.)</option><option value="1.07">Wayne (1.07%)</option><option value="1.22">Williams (state avg.)</option><option value="1.26">Wood (1.26%)</option><option value="1.22">Wyandot (state avg.)</option></select></div>
+      <div class="rline county"><label for="cv">County's value <span class="stamp" aria-hidden="true">Too high?</span></label><span class="money">$<input id="cv" inputmode="numeric" value="400,000" aria-label="County's value of your home in dollars"></span></div>
       <div class="rline sales"><label for="mv">What similar homes nearby sold for</label><span class="money">$<input id="mv" inputmode="numeric" value="350,000" aria-label="What similar homes sold for in dollars"></span></div>
-      <div class="total"><span>Extra tax you may be paying</span><output id="peryr" aria-live="polite">$1,000/yr</output></div>
-      <small id="per3">About $3,000 until the next reappraisal, at a ~2% effective tax rate. Rates vary by county and school district.</small>
+      <div class="total"><span>Extra tax you may be paying</span><output id="peryr" aria-live="polite">$610/yr</output></div>
+      <small id="per3">About $1,830 until the next reappraisal, at the Ohio average 1.22% effective tax rate (SmartAsset). Your bill depends on your school district.</small>
       <a class="btn btn-gold" href="#join">Check my real numbers</a>
     </div>
   </div>
 </div>
+
+<div class="statline"><div class="wrap"><p><strong>Up to 4 in 10 U.S. homes may be over-assessed, yet fewer than 1 in 20 owners ever appeal.</strong> <span>Sources: Realtor.com 2025 Property Tax Report; National Taxpayers Union.</span></p></div></div>
+
+<section id="dates" class="dates">
+  <div class="wrap">
+    <h2>Key dates for your county</h2>
+    <p class="sub measure">Pick your county to see when its values change and when you can file. We check for newly announced county dates every day.</p>
+    <div class="dpick"><label for="dc">Your county</label><select id="dc"><option value="">Choose your county</option><option>Adams</option><option>Allen</option><option>Ashland</option><option>Ashtabula</option><option>Athens</option><option>Auglaize</option><option>Belmont</option><option>Brown</option><option>Butler</option><option>Carroll</option><option>Champaign</option><option>Clark</option><option>Clermont</option><option>Clinton</option><option>Columbiana</option><option>Coshocton</option><option>Crawford</option><option>Cuyahoga</option><option>Darke</option><option>Defiance</option><option>Delaware</option><option>Erie</option><option>Fairfield</option><option>Fayette</option><option>Franklin</option><option>Fulton</option><option>Gallia</option><option>Geauga</option><option>Greene</option><option>Guernsey</option><option>Hamilton</option><option>Hancock</option><option>Hardin</option><option>Harrison</option><option>Henry</option><option>Highland</option><option>Hocking</option><option>Holmes</option><option>Huron</option><option>Jackson</option><option>Jefferson</option><option>Knox</option><option>Lake</option><option>Lawrence</option><option>Licking</option><option>Logan</option><option>Lorain</option><option>Lucas</option><option>Madison</option><option>Mahoning</option><option>Marion</option><option>Medina</option><option>Meigs</option><option>Mercer</option><option>Miami</option><option>Monroe</option><option>Montgomery</option><option>Morgan</option><option>Morrow</option><option>Muskingum</option><option>Noble</option><option>Ottawa</option><option>Paulding</option><option>Perry</option><option>Pickaway</option><option>Pike</option><option>Portage</option><option>Preble</option><option>Putnam</option><option>Richland</option><option>Ross</option><option>Sandusky</option><option>Scioto</option><option>Seneca</option><option>Shelby</option><option>Stark</option><option>Summit</option><option>Trumbull</option><option>Tuscarawas</option><option>Union</option><option>Van Wert</option><option>Vinton</option><option>Warren</option><option>Washington</option><option>Wayne</option><option>Williams</option><option>Wood</option><option>Wyandot</option></select></div>
+    <div id="dout" class="dout" aria-live="polite"><p class="muted">Choose a county to see its dates. Every Ohio county uses the same filing window: <b>January 1 – March 31</b>.</p></div>
+    <p class="note" id="dsrc">Sources: Ohio Department of Taxation reappraisal and update schedule; county Auditor announcements.</p>
+  </div>
+</section>
 
 <section>
   <div class="wrap two">
@@ -412,7 +444,7 @@
     <details><summary>Is this the County Auditor?</summary><p>No. Value My Home Fairly is an independent service based in Cincinnati, not affiliated with any county, Auditor or Board of Revision.</p></details>
     <details><summary>Are you lawyers or appraisers?</summary><p>No. We prepare factual information from public records so you can file your own complaint. We don't file for you, represent you or give legal advice. For complex or commercial cases we'll point you to an attorney.</p></details>
     <details><summary>Could appealing raise my value?</summary><p>Yes. The Board can keep, lower or raise a value. That's why the check tells you when not to file.</p></details>
-    <details><summary>How much will I save?</summary><p>It depends on how far your value is above the market and on your local tax rate. As a rough guide, each $50,000 of overvaluation costs about $1,000 a year. Your free check gives you your own estimate.</p></details>
+    <details><summary>How much will I save?</summary><p>It depends on how far your value is above the market and on your local tax rate. As a rough guide, each $50,000 of overvaluation costs about $600–$900 a year in most Ohio counties (average effective rates of roughly 0.8%–1.8%). Your free check gives you your own estimate.</p></details>
     <details><summary>When can I file?</summary><p>Between January 1 and March 31, with your county Board of Revision. Join the list and we'll remind you.</p></details>
     <details><summary>What happens to my information?</summary><p>We use your address to look up public property records and your email to send your result and reminders. We never sell or share it, and we'll delete it on request.</p></details>
   </div>
@@ -438,15 +470,36 @@
   try {
     const n=s=>Number(String(s).replace(/[^0-9.]/g,''))||0, f=x=>'$'+Math.round(x).toLocaleString();
     const cv=document.getElementById('cv'), mv=document.getElementById('mv'), a=document.getElementById('peryr'), b=document.getElementById('per3');
-    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=Math.round(gap*0.02/10)*10;
+    const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), rt=Number(document.getElementById('rc').value)||1.22, yr=Math.round(gap*rt/100/10)*10;
       a.textContent = gap>0 ? f(yr)+'/yr' : '$0';
-      b.textContent = gap>0 ? 'About '+f(yr*3)+' until the next reappraisal, at a ~2% effective tax rate. Rates vary by county and school district.' : "If your value is at or below what homes sell for, you're likely taxed fairly and we'd tell you not to file."; };
+      b.textContent = gap>0 ? 'About '+f(yr*3)+' until the next reappraisal, at a '+rt.toFixed(2)+'% average effective tax rate for the county (SmartAsset). Your bill depends on your school district.' : "If your value is at or below what homes sell for, you're likely taxed fairly and we'd tell you not to file."; };
+    document.getElementById('rc').addEventListener('change',upd);
     [cv,mv].forEach(i=>{ i.addEventListener('input',upd); i.addEventListener('blur',()=>{ i.value=n(i.value).toLocaleString(); }); });
     const s=document.getElementById('o-county'), note=document.getElementById('ham-note');
     s.addEventListener('change',()=>{ note.style.display = s.value==='Hamilton' ? 'block' : 'none'; });
     const sticky=document.querySelector('.sticky'), join=document.getElementById('join');
     if ('IntersectionObserver' in window) new IntersectionObserver(e=>{ const on=e[0].isIntersecting; sticky.style.opacity=on?'0':'1'; sticky.style.pointerEvents=on?'none':'auto'; }).observe(join);
   } catch(e) {}
+</script>
+<script>
+  (async()=>{ try {
+    const sel=document.getElementById('dc'), out=document.getElementById('dout'), src=document.getElementById('dsrc');
+    const d=await fetch('/county-dates.json',{cache:'no-store'}).then(r=>r.json());
+    const fmt=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    src.textContent='Sources: '+d.sources.join('; ')+'. Last checked '+fmt(d.lastChecked)+'.';
+    const show=()=>{ const c=d.counties[sel.value]; if(!c){return;}
+      const yr=2026, chg=c.reappraisal===yr?'reappraisal':(c.update===yr?'update':null);
+      const cell=(k,v,s,hot)=>'<div'+(hot?' class="hot"':'')+'><b class="k">'+k+'</b><span class="v">'+v+'</span><small>'+s+'</small></div>';
+      out.innerHTML=
+        cell('2026 values', chg?'Changing':'No county-wide change', chg?'2026 is '+(chg==='update'?'an ':'a ')+chg+' year in '+sel.value+' County, so new values show on bills paid in 2027.':'Your value usually stays the same this year unless your home changed. You can still file if it is too high.', !!chg)+
+        cell('Value notices', c.valueNoticesPosted?fmt(c.valueNoticesPosted):(chg?'Not announced yet':'Not expected'), c.valueNoticesPosted?'Your County Auditor has posted new values.':(chg?'We check daily and will update this page.':'No new county-wide values this year.'))+
+        cell('Filing window', 'Jan 1 – Mar 31, 2027', 'File with the '+sel.value+' County Board of Revision.', true)+
+        cell('Next full reappraisal', (c.reappraisal===yr?'This year (2026)':String(c.reappraisal)), (c.scheduleChanged2026?'Moved by the state in Jan 2026. ':'')+'Update year: '+c.update+'.'+(c.informalReview?' Informal review: '+c.informalReview+'.':''));
+    };
+    sel.addEventListener('change',show);
+    const rc=document.getElementById('rc');
+    if(rc) rc.addEventListener('change',()=>{ const name=rc.options[rc.selectedIndex].text.replace(/ \(.*$/,''); if(d.counties[name]){ sel.value=name; show(); } });
+  } catch(e){} })();
 </script>
 </body>
 </html>
