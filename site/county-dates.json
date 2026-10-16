@@ -1,13 +1,13 @@
 {
- "lastChecked": "2026-10-15",
+ "lastChecked": "2026-10-16",
  "filingWindow": {
   "opens": "2027-01-01",
   "closes": "2027-03-31",
   "taxYear": 2026,
-  "note": "Ohio law: complaints for tax year 2026 go to the county Board of Revision Jan 1 \u2013 Mar 31, 2027."
+  "note": "Ohio law: complaints for tax year 2026 go to the county Board of Revision Jan 1 – Mar 31, 2027."
  },
  "sources": [
-  "Ohio Dept. of Taxation, Year of Sexennial Reappraisal and Update 2025\u20132030",
+  "Ohio Dept. of Taxation, Year of Sexennial Reappraisal and Update 2025–2030",
   "Ohio Dept. of Taxation bulletin, Jan 15 2026 (16 counties' reappraisal moved)"
  ],
  "counties": {
@@ -32,8 +32,8 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Informal hearings Sep 14–18, 21 and 23, 2026; auditor extended by three days",
+   "notes": "Notices arrived mid-Sep 2026 (some delayed in mail); hearing dates and 3-day extension per News 5 Cleveland, Sep 30 2026 (Auditor Cindy Funk)."
   },
   "Ashtabula": {
    "reappraisal": 2026,
@@ -48,7 +48,7 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": "Jul 29\u201331, 2026 (appointment only)",
+   "informalReview": "Jul 29–31, 2026 (appointment only)",
    "notes": "Preliminary values on auditor website; postcards mailed (Athens County Independent, Aug 4 2026)."
   },
   "Auglaize": {
@@ -79,9 +79,9 @@
    "reappraisal": 2026,
    "update": 2029,
    "scheduleChanged2026": false,
-   "valueNoticesPosted": null,
+   "valueNoticesPosted": "2026-06-30",
    "informalReview": null,
-   "notes": ""
+   "notes": "Tentative values approved by Ohio DTE Jun 25 2026 (Butler County Auditor 2026 FAQ); county released updated values Jun 30 2026 (Local 12, Jun 30 2026)."
   },
   "Carroll": {
    "reappraisal": 2025,
@@ -240,7 +240,7 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": "Jul 13\u201324, 2026 (appointment only)",
+   "informalReview": "Jul 13–24, 2026 (appointment only)",
    "notes": "Tentative value notices mailed June 2026; final values Dec 2026 (Greene County 2026 Property Revaluation page)."
   },
   "Guernsey": {
@@ -464,8 +464,8 @@
    "update": 2029,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Free one-on-one reviews Jul 16 – end of Aug 2026 (book at MCReval.org)",
+   "notes": "Informal review window per WYSO, Jul 18 2026."
   },
   "Morgan": {
    "reappraisal": 2030,
@@ -600,8 +600,8 @@
    "update": 2026,
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "informalReview": "Informal hearing appointments filled; documentation accepted by email through Aug 7, 2026",
+   "notes": "Seneca County Auditor 2026 Triennial Update / Informal Review page."
   },
   "Shelby": {
    "reappraisal": 2029,
@@ -623,9 +623,9 @@
    "reappraisal": 2026,
    "update": 2029,
    "scheduleChanged2026": false,
-   "valueNoticesPosted": null,
-   "informalReview": null,
-   "notes": ""
+   "valueNoticesPosted": "2026-07-20",
+   "informalReview": "Appraiser meetings Aug 10–27, 2026 (in person, virtual by appointment, or phone)",
+   "notes": "Notices mailed beginning Jul 20 2026; in-person meetings at 12 sites Aug 10–27 (Summit County Fiscal Office press release)."
   },
   "Trumbull": {
    "reappraisal": 2029,
@@ -657,7 +657,7 @@
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "Tentative 2026 update values completed and online; informal hearings by appointment at 419-238-0843 (Van Wert Independent, Jul 20 2026)."
   },
   "Vinton": {
    "reappraisal": 2027,
@@ -705,7 +705,7 @@
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "Tentative 2026 update values approved by state and posted on auditor website for open inspection (BG Independent Media, Jul 23 2026)."
   },
   "Wyandot": {
    "reappraisal": 2025,
