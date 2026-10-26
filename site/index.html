@@ -461,7 +461,7 @@
           <div id="ham-note" class="hamnote full">Hamilton County checks are open now. For the fastest result, <a href="/cincinnati/">use the Hamilton County page</a>.</div>
           <div class="field"><label for="o-name">Your name</label><input id="o-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="o-address">Home street address</label><input id="o-address" name="address" type="text" autocomplete="street-address" required></div>
+          <div class="field"><label for="o-address">Home street address</label><input id="o-address" name="address" type="text" autocomplete="address-line1" required></div>
           <div class="field"><label for="o-zip">ZIP</label><input id="o-zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
           <div class="field full"><label for="o-source">How did you hear about us?</label>
             <select id="o-source" name="source"><option value="">Choose one (optional)</option><option>My realtor or lender</option><option>Nextdoor</option><option>Facebook group</option><option>Friend or neighbor</option><option>Flyer</option><option>Search / other</option></select></div>
@@ -560,6 +560,17 @@
     const rc=document.getElementById('rc');
     if(rc) rc.addEventListener('change',()=>{ const name=rc.options[rc.selectedIndex].text.replace(/ \(.*$/,''); if(d.counties[name]){ sel.value=name; show(); } });
   } catch(e){} })();
+</script>
+<script>
+  // Remove repeated parts of an address (e.g. "12 Main St, 12 Main St") before the form is sent.
+  document.querySelectorAll('form input[name="address"]').forEach(function (inp) {
+    inp.form.addEventListener('submit', function () {
+      var seen = {}, parts = inp.value.split(/\s*[,\n]\s*/).filter(function (p) {
+        var k = p.trim().toLowerCase(); if (!k || seen[k]) return false; seen[k] = 1; return true;
+      });
+      inp.value = parts.join(', ');
+    });
+  });
 </script>
 </body>
 </html>

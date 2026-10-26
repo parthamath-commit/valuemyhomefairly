@@ -173,7 +173,7 @@
         <input id="email" name="email" type="email" autocomplete="email" required>
         <div class="row">
           <div><label for="address">Home street address</label>
-          <input id="address" name="address" type="text" autocomplete="street-address" placeholder="1234 Main St" required></div>
+          <input id="address" name="address" type="text" autocomplete="address-line1" placeholder="1234 Main St" required></div>
           <div><label for="zip">ZIP</label>
           <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
         </div>
@@ -274,6 +274,17 @@
     const upd=()=>{ const gap=Math.max(0,n(cv.value)-n(mv.value)), yr=gap*0.0144; a.textContent = gap>0 ? f(Math.round(yr/10)*10)+' / year' : 'Looks fair'; b.textContent = gap>0 ? '≈ '+f(Math.round(yr*3/10)*10)+' until the next reappraisal · at Hamilton County\'s 1.44% average effective tax rate (SmartAsset)' : "If your value is at or below what homes sell for, we'll tell you not to file."; };
     [cv,mv].forEach(i=>{ i.addEventListener('input',upd); i.addEventListener('blur',()=>{ i.value=n(i.value).toLocaleString(); }); });
   } catch(e) {}
+</script>
+<script>
+  // Remove repeated parts of an address (e.g. "12 Main St, 12 Main St") before the form is sent.
+  document.querySelectorAll('form input[name="address"]').forEach(function (inp) {
+    inp.form.addEventListener('submit', function () {
+      var seen = {}, parts = inp.value.split(/\s*[,\n]\s*/).filter(function (p) {
+        var k = p.trim().toLowerCase(); if (!k || seen[k]) return false; seen[k] = 1; return true;
+      });
+      inp.value = parts.join(', ');
+    });
+  });
 </script>
 </body>
 </html>
