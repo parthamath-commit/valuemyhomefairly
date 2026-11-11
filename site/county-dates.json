@@ -1,5 +1,5 @@
 {
- "lastChecked": "2026-10-26",
+ "lastChecked": "2026-11-07",
  "filingWindow": {
   "opens": "2027-01-01",
   "closes": "2027-03-31",
@@ -207,9 +207,9 @@
    "reappraisal": 2030,
    "update": 2026,
    "scheduleChanged2026": true,
-   "valueNoticesPosted": null,
+   "valueNoticesPosted": "2026-06-09",
    "informalReview": "Review sessions through Sep 5, 2026 (virtual, in person, or documents only)",
-   "notes": "Final values expected Dec 2026 (Franklin County Auditor news, Aug 4 2026)."
+   "notes": "Final values expected Dec 2026 (Franklin County Auditor news, Aug 4 2026). Tentative 2026 values released online Jun 9 2026 (Franklin County Auditor news release, Jun 9 2026)."
   },
   "Fulton": {
    "reappraisal": 2026,
@@ -569,7 +569,7 @@
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "Tax year 2026 triennial values available online; posting date not stated (Richland Source, Oct 25 2026)."
   },
   "Ross": {
    "reappraisal": 2025,
