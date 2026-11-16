@@ -1,5 +1,5 @@
 {
- "lastChecked": "2026-11-07",
+ "lastChecked": "2026-11-14",
  "filingWindow": {
   "opens": "2027-01-01",
   "closes": "2027-03-31",
@@ -233,7 +233,7 @@
    "scheduleChanged2026": true,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "Tentative TY2026 values now available for review; posting date not stated (Geauga County Auditor website, checked Nov 14 2026)."
   },
   "Greene": {
    "reappraisal": 2026,
@@ -257,7 +257,7 @@
    "scheduleChanged2026": true,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": "Auditor Triennial page: finalized 2026 values not yet available, check back in November (Hamilton County Auditor, checked Oct 21 2026)."
+   "notes": "Auditor Triennial page: finalized 2026 values not yet available, check back in November (Hamilton County Auditor, checked Oct 21 2026). Update: auditor page says Value Change Notice letters will arrive in the mail in the coming weeks; no mailing date stated (Hamilton County Auditor Triennial page, checked Nov 14 2026)."
   },
   "Hancock": {
    "reappraisal": 2028,
@@ -281,7 +281,7 @@
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "ODT approved tentative 2026 values; viewable online under Land/Building tab; posting date not stated (Harrison County Auditor website, checked Nov 14 2026)."
   },
   "Henry": {
    "reappraisal": 2029,
@@ -369,7 +369,7 @@
    "scheduleChanged2026": false,
    "valueNoticesPosted": null,
    "informalReview": null,
-   "notes": ""
+   "notes": "Public notice: 2026 Triennial Update values open for review online or at the auditor office; posting date not stated (Licking County news, checked Nov 14 2026)."
   },
   "Logan": {
    "reappraisal": 2025,
